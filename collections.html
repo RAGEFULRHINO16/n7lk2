@@ -1,11 +1,11 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Registry // N7 LK - Premium Muslim-Wear</title>
+  <title>Registry // N7 LK - Posh Brutalist Modesty</title>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Cinzel:wght@400;700;900&family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&family=Cinzel:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet" />
@@ -16,411 +16,338 @@
       theme: {
         extend: {
           colors: {
-            primary: "#CAFF33", // Neon Cyber Yellow
-            accent: "#00E0FF", // Electric Blue
-            "background-dark": "#0A0A0A", // Off-Black
-            "surface-tech": "#1A1A1A",
-            "text-main": "#FFFFFF",
-            "text-dim": "#A0A0A0",
+            "primary": "#000000",
+            "accent": "#F5E6CA", // Neon Beige / Vibrant Cream
+            "background-light": "#F2F2F2",
+            "background-dark": "#050505",
+            "text-main": "#000000",
+            "text-contrast": "#FFFFFF",
           },
           fontFamily: {
-            sans: ["Archivo", "sans-serif"],
-            serif: ["Cinzel", "serif"],
-            mono: ["Space Grotesk", "monospace"],
-            display: ["Syncopate", "sans-serif"],
+            "sans": ["Archivo", "sans-serif"],
+            "serif": ["Cinzel", "serif"],
+            "mono": ["Space Grotesk", "monospace"],
           },
           boxShadow: {
-            brutalist: "8px 8px 0px 0px #CAFF33",
-            "brutalist-accent": "8px 8px 0px 0px #00E0FF",
-            "brutalist-sm": "4px 4px 0px 0px #CAFF33",
-            glitch: "3px 3px 0px #FF00FF, -3px -3px 0px #00FFFF",
+            'brutalist': '8px 8px 0px 0px #000000',
+            'brutalist-sm': '4px 4px 0px 0px #000000',
+            'brutalist-hover': '4px 4px 0px 0px #000000',
           },
           animation: {
-            marquee: "marquee 20s linear infinite",
-            "glitch-pulse": "glitch 0.2s infinite ease-in-out alternate",
+            'marquee': 'marquee 25s linear infinite',
           },
           keyframes: {
             marquee: {
-              "0%": { transform: "translateX(0%)" },
-              "100%": { transform: "translateX(-100%)" },
-            },
-            glitch: {
-              "0%": { transform: "translate(0)" },
-              "25%": { transform: "translate(-2px, 2px)" },
-              "50%": { transform: "translate(2px, -2px)" },
-              "75%": { transform: "translate(-1px, -1px)" },
-              "100%": { transform: "translate(1px, 1px)" },
-            },
-          },
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-100%)' },
+            }
+          }
         },
       },
-    };
+    }
   </script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .outline-text {
-      -webkit-text-stroke: 1px white;
-      color: transparent;
-    }
-
-    .cyber-grid {
-      background-image: linear-gradient(rgba(202, 255, 51, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(202, 255, 51, 0.05) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-
-    .glitch-img-hover {
-      opacity: 0;
-      transition: opacity 0.1s steps(2, end);
-    }
-
-    .group:hover .glitch-img-hover {
-      opacity: 0.3;
-      animation: glitch-anim 0.3s infinite linear alternate-reverse;
-    }
-
-    @keyframes glitch-anim {
-      0% {
-        clip-path: inset(10% 0 80% 0);
-        transform: translate(-2px, 1px);
-      }
-
-      100% {
-        clip-path: inset(60% 0 30% 0);
-        transform: translate(2px, -1px);
-      }
-    }
-  </style>
+  <style type="text/tailwindcss">
+    body {
+            background-color: #F2F2F2;
+            background-image: linear-gradient(#d4d4d4 1px, transparent 1px), linear-gradient(90deg, #d4d4d4 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .outline-text {
+            -webkit-text-stroke: 2px #000; 
+            color: transparent;
+        }
+        .vertical-nav {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
 
-<body class="bg-background-dark text-white font-sans selection:bg-primary selection:text-black antialiased">
-  <!-- Desktop Vertical Navigation -->
+<body
+  class="bg-background-light text-text-main font-sans antialiased overflow-x-hidden selection:bg-black selection:text-accent">
+  <!-- Desktop Vertical Nav -->
   <nav
-    class="fixed left-0 top-0 h-full w-24 bg-black border-r-2 border-primary z-[100] hidden lg:flex flex-col items-center py-12 justify-between">
-    <div class="flex flex-col items-center gap-12">
-      <a href="index.html" class="font-serif text-3xl font-black rotate-[-90deg] tracking-tighter whitespace-nowrap">N7
-        LK</a>
-      <div class="h-24 w-px bg-primary/30"></div>
+    class="fixed left-0 top-0 bottom-0 w-16 md:w-20 bg-white border-r-2 border-black z-50 flex flex-col justify-between items-center py-8 hidden lg:flex">
+    <a class="font-serif text-2xl font-black tracking-tighter transform -rotate-90 origin-center"
+      href="index.html">N7.</a>
+    <div class="flex flex-col gap-12 items-center flex-grow justify-center">
+      <div class="vertical-nav gap-8 flex">
+        <a class="text-xs font-bold uppercase tracking-[0.2em] hover:text-gray-500 transition-colors rotate-180"
+          href="collections.html">Collections</a>
+        <a class="text-xs font-bold uppercase tracking-[0.2em] hover:text-gray-500 transition-colors rotate-180"
+          href="about.html">About</a>
+        <a class="text-xs font-bold uppercase tracking-[0.2em] hover:text-gray-500 transition-colors rotate-180"
+          href="index.html">Home</a>
+      </div>
     </div>
-    <div
-      class="flex flex-col gap-12 text-[10px] font-mono font-bold uppercase tracking-[0.4em] rotate-[-90deg] whitespace-nowrap">
-      <a href="index.html" class="hover:text-primary transition-colors">Home</a>
-      <a href="collections.html" class="text-primary">Registry</a>
-      <a href="index.html#about" class="hover:text-primary transition-colors">Core</a>
-    </div>
-    <div class="flex flex-col gap-6">
-      <button class="material-symbols-outlined text-primary hover:scale-125 transition-transform">search</button>
-      <button class="material-symbols-outlined text-primary hover:scale-125 transition-transform relative">
-        shopping_bag
-        <span class="absolute -top-1 -right-1 flex h-2 w-2">
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-        </span>
-      </button>
-    </div>
+    <a class="group relative w-full aspect-square flex items-center justify-center bg-black text-white hover:bg-accent hover:text-black transition-colors border-y-2 border-black"
+      href="collections.html">
+      <span class="vertical-nav text-sm font-bold tracking-widest rotate-180 text-accent">SHOP</span>
+    </a>
   </nav>
 
   <!-- Mobile Header -->
   <header
-    class="lg:hidden sticky top-0 z-[100] bg-black border-b-2 border-primary px-6 py-4 flex justify-between items-center">
-    <a href="index.html" class="font-serif text-2xl font-black tracking-tighter">N7 LK</a>
-    <div class="flex gap-4">
-      <button class="material-symbols-outlined">search</button>
-      <button class="material-symbols-outlined">shopping_bag</button>
-      <button class="material-symbols-outlined">menu</button>
-    </div>
+    class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b-2 border-black lg:hidden px-4 h-16 flex items-center justify-between">
+    <a class="font-serif text-2xl font-black tracking-tighter" href="index.html">N7 LK.</a>
+    <button
+      class="p-2 border-2 border-black bg-accent shadow-brutalist-sm active:translate-y-1 active:shadow-none transition-all">
+      <span class="material-symbols-outlined font-bold text-black">menu</span>
+    </button>
   </header>
 
-  <main class="lg:ml-24 cyber-grid min-h-screen">
-    <!-- Scrolling Marquee -->
-    <div class="bg-primary text-black py-4 border-b-2 border-black overflow-hidden whitespace-nowrap z-50 relative">
-      <div class="flex animate-marquee font-display text-2xl font-black uppercase tracking-tighter">
+  <main class="lg:pl-20">
+    <!-- Marquee -->
+    <div class="bg-accent text-black py-4 border-b-2 border-black overflow-hidden whitespace-nowrap z-50 relative">
+      <div class="flex animate-marquee font-serif text-2xl font-black uppercase tracking-tighter italic">
         <span class="mx-8">Registry_v01 // HighModesty</span>
-        <span class="mx-8 text-black/20 outline-text">Registry_v01 // HighModesty</span>
+        <span class="mx-8 text-black/20 outline-text">The_Drop_Stream</span>
         <span class="mx-8">Registry_v01 // HighModesty</span>
-        <span class="mx-8 text-black/20 outline-text">Registry_v01 // HighModesty</span>
+        <span class="mx-8 text-black/20 outline-text">The_Drop_Stream</span>
         <span class="mx-8">Registry_v01 // HighModesty</span>
-        <!-- Duplicate for seamless loop -->
+        <!-- Duplicate -->
         <span class="mx-8">Registry_v01 // HighModesty</span>
-        <span class="mx-8 text-black/20 outline-text">Registry_v01 // HighModesty</span>
+        <span class="mx-8 text-black/20 outline-text">The_Drop_Stream</span>
         <span class="mx-8">Registry_v01 // HighModesty</span>
-        <span class="mx-8 text-black/20 outline-text">Registry_v01 // HighModesty</span>
+        <span class="mx-8 text-black/20 outline-text">The_Drop_Stream</span>
         <span class="mx-8">Registry_v01 // HighModesty</span>
       </div>
     </div>
-    <main class="flex-grow" id="new-in">
-      <div class="mx-auto max-w-[1600px] px-4 py-8 md:px-8 lg:px-12">
-        <div class="mb-20 flex flex-col items-start gap-4 max-w-5xl">
-          <span
-            class="bg-primary text-black px-3 py-1 font-mono text-xs font-bold uppercase tracking-[0.35em] inline-block">SYSTEM_REGISTRY
-            // v.01</span>
-          <h1 class="text-7xl md:text-9xl font-serif font-black text-white uppercase leading-[0.8] tracking-tighter">
-            The <span class="outline-text">Editorial</span><br />
-            Registry.
-          </h1>
-          <p class="font-mono text-sm text-dim max-w-xl leading-tight mt-6">
-            REALTIME_DATABASE // ACCESSING LATEST DROP // COLOMBO_DNA_AUTHENTICATED.
-            EXPLORE THE MODEST LUXURY SYSTEM.
-          </p>
-        </div>
 
-        <div class="flex flex-col lg:flex-row gap-16">
-          <!-- Sidebar -->
-          <aside class="w-full lg:w-72 flex-shrink-0 lg:sticky lg:top-32 h-fit">
-            <div class="border-2 border-primary p-8 bg-black shadow-brutalist mb-12">
-              <h3 class="font-display text-sm font-black uppercase tracking-widest text-primary mb-8 underline">
-                CATEGORY_INDEX</h3>
-              <ul class="space-y-6">
-                <li>
-                  <a href="#" class="flex justify-between items-center group">
-                    <span
-                      class="font-serif italic text-2xl group-hover:text-primary transition-colors">01_ALL_UNITS</span>
-                    <span
-                      class="material-symbols-outlined text-xs text-primary opacity-0 group-hover:opacity-100 transition-all">arrow_forward</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex justify-between items-center group">
-                    <span
-                      class="font-serif text-2xl text-dim group-hover:text-white transition-colors">02_DRESSES</span>
-                    <span
-                      class="text-[10px] font-mono text-primary opacity-0 group-hover:opacity-100 transition-all">ACTIVE</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex justify-between items-center group">
-                    <span
-                      class="font-serif text-2xl text-dim group-hover:text-white transition-colors">03_CO_ORDS</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex justify-between items-center group">
-                    <span class="font-serif text-2xl text-dim group-hover:text-white transition-colors">04_ABAYAS</span>
-                  </a>
-                </li>
-              </ul>
+    <div class="max-w-[1600px] mx-auto px-6 md:px-12 py-12">
+      <!-- Header -->
+      <div class="mb-20 flex flex-col items-start gap-4 max-w-5xl">
+        <span
+          class="bg-black text-white px-3 py-1 font-mono text-xs font-bold uppercase tracking-[0.35em] inline-block">N7_LK
+          // REGISTRY</span>
+        <h1 class="text-7xl md:text-9xl font-serif font-black text-black uppercase leading-[0.8] tracking-tighter">
+          The <span class="outline-text">Editorial</span><br />
+          Registry.
+        </h1>
+        <p class="font-mono text-sm text-gray-500 max-w-xl leading-tight mt-6 uppercase">
+          Curated silhouettes for the modern modest entity. <br />All units standardized for Colombo heritage.
+        </p>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="flex flex-col lg:flex-row gap-16">
+        <!-- Sidebar -->
+        <aside class="w-full lg:w-72 flex-shrink-0 lg:sticky lg:top-32 h-fit">
+          <div class="border-2 border-black p-8 bg-white shadow-brutalist mb-12">
+            <h3 class="font-mono text-[10px] font-black uppercase tracking-widest text-black mb-8 underline">
+              CATEGORY_INDEX</h3>
+            <ul class="space-y-6">
+              <li>
+                <a href="#" class="flex justify-between items-center group">
+                  <span
+                    class="font-serif italic text-2xl group-hover:text-gray-500 transition-colors uppercase">01_All_Units</span>
+                  <span
+                    class="material-symbols-outlined text-xs text-black opacity-0 group-hover:opacity-100 transition-all">arrow_forward</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex justify-between items-center group">
+                  <span
+                    class="font-serif text-2xl text-gray-400 group-hover:text-black transition-colors uppercase">02_Abayas</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex justify-between items-center group">
+                  <span
+                    class="font-serif text-2xl text-gray-400 group-hover:text-black transition-colors uppercase">03_Dresses</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex justify-between items-center group">
+                  <span
+                    class="font-serif text-2xl text-gray-400 group-hover:text-black transition-colors uppercase">04_Sets</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-2 border-black p-8 bg-accent shadow-brutalist">
+            <h3 class="font-mono text-[10px] font-black uppercase tracking-widest text-black mb-8 underline">DNA_FILTERS
+            </h3>
+            <div class="flex flex-col gap-4 font-mono text-[10px] font-bold uppercase">
+              <button class="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                <span class="w-3 h-3 bg-black"></span> Price: High_to_Low
+              </button>
+              <button class="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                <span class="w-3 h-3 border border-black"></span> New_Arrivals
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="flex-1">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <!-- Product 01 -->
+            <div
+              class="group relative bg-white border-2 border-black shadow-brutalist transition-transform hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_#000]">
+              <div class="aspect-[3/4] overflow-hidden bg-gray-200 relative">
+                <img alt="Emerald Flow"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwl3KFy0f0RpkkH61yIOEtuyU0rbMvsahGEuoTy2-Lw7Vfgn85Ba-DdQNI4C5BcuCgbt0lrDckS-HoOEGIX7y14ms8oJRVNyaHHpJdELZal95YbP4kznYlUExvlE9upDzPwMzBRjBMlOjzDFxq-97Vfs2vxyxDKy7Iy8KANM2-tR7eP52DVK0GFb3XbCq0-FsL8P0i9rVZvUfcWgg5BQZyxqcNUA-PVNuinWp1M-KU7X9B93Ap3qRckU_r8yjbbLCCuTPo8RDV8jFr" />
+                <div
+                  class="absolute top-2 left-2 bg-black text-white px-2 py-1 text-xs font-mono font-bold uppercase tracking-widest">
+                  New Drop</div>
+              </div>
+              <div class="pt-6 pb-4 px-4 flex justify-between items-start">
+                <div>
+                  <h3 class="font-serif text-2xl font-bold leading-none mb-1 uppercase italic">The Serene Drape</h3>
+                  <p class="font-mono text-[10px] text-gray-500 uppercase">Unit_ID: N7-24-01</p>
+                </div>
+                <div class="text-right">
+                  <span class="block font-bold text-lg">LKR 12.5K</span>
+                </div>
+              </div>
+              <a href="productpageexample.html"
+                class="block text-center w-full py-3 bg-black text-white font-bold uppercase tracking-widest text-xs hover:bg-accent hover:text-black border-t-2 border-black transition-colors">
+                Secure Unit
+              </a>
             </div>
 
-            <div class="border-2 border-accent p-8 bg-black shadow-brutalist-accent">
-              <h3 class="font-display text-sm font-black uppercase tracking-widest text-accent mb-8 underline">
-                DNA_PALETTE</h3>
-              <div class="grid grid-cols-4 gap-4">
-                <button class="aspect-square bg-[#CAFF33] border border-white/20 hover:scale-110 transition-transform"
-                  title="Cyber Yellow"></button>
-                <button class="aspect-square bg-[#00E0FF] border border-white/20 hover:scale-110 transition-transform"
-                  title="Electric Blue"></button>
-                <button class="aspect-square bg-white border border-white/20 hover:scale-110 transition-transform"
-                  title="Pure White"></button>
-                <button class="aspect-square bg-[#333333] border border-white/20 hover:scale-110 transition-transform"
-                  title="Stealth Grey"></button>
+            <!-- Product 02 -->
+            <div
+              class="group relative bg-white border-2 border-black shadow-brutalist transition-transform hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_#000] mt-12 md:mt-0">
+              <div class="aspect-[3/4] overflow-hidden bg-gray-200 relative">
+                <img alt="Rose Petal"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZujhx2dTKXGSWGOUSSRdP_sfyNYSIehePmZBbCMypKLzHtBM-YoElr7Bajoraf-o69zG8rjd8OBKLV5OtdKsB-O-ur66YSOdRYix3ltsEUIwSdsmo-uLV0QnXr3k41sdfpzjmZ7AFVhUo-eBC1D26V2SuNqUmctjKlmCq7rU_Lcn2vd_1C1gBV5Y6MKLR03f4pSxK-jAstUhIhh5zzxyUbIrC0gC6zEiQ0Jmf4xt_D0aKSrjUuifSyhWm7su3HD25nOOvccB3JGSf" />
               </div>
-            </div>
-          </aside>
-
-          <div class="flex-1">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <!-- Item 01 -->
-              <div
-                class="group relative bg-black border-2 border-primary shadow-brutalist hover:shadow-none transition-all">
-                <div class="aspect-[3/4] overflow-hidden relative">
-                  <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwl3KFy0f0RpkkH61yIOEtuyU0rbMvsahGEuoTy2-Lw7Vfgn85Ba-DdQNI4C5BcuCgbt0lrDckS-HoOEGIX7y14ms8oJRVNyaHHpJdELZal95YbP4kznYlUExvlE9upDzPwMzBRjBMlOjzDFxq-97Vfs2vxyxDKy7Iy8KANM2-tR7eP52DVK0GFb3XbCq0-FsL8P0i9rVZvUfcWgg5BQZyxqcNUA-PVNuinWp1M-KU7X9B93Ap3qRckU_r8yjbbLCCuTPo8RDV8jFr"
-                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                  <div class="glitch-img-hover absolute inset-0 bg-primary mix-blend-overlay pointer-events-none"></div>
-                  <div
-                    class="absolute top-4 left-4 bg-black text-primary px-2 py-1 font-mono text-[10px] uppercase font-bold tracking-widest border border-primary">
-                    ITEM_REF // 001_EMERALD</div>
+              <div class="pt-6 pb-4 px-4 flex justify-between items-start">
+                <div>
+                  <h3 class="font-serif text-2xl font-bold leading-none mb-1 uppercase italic">Desert Rose Set</h3>
+                  <p class="font-mono text-[10px] text-gray-500 uppercase">Unit_ID: N7-24-02</p>
                 </div>
-                <div class="p-6 flex flex-col gap-4 border-t-2 border-primary">
-                  <div class="flex justify-between items-start">
-                    <h3 class="font-serif text-3xl font-black uppercase tracking-tighter leading-none">
-                      Emerald<br />Flow.</h3>
-                    <span class="font-mono text-xl font-bold">LKR 12.5K</span>
-                  </div>
-                  <div class="flex gap-2">
-                    <a href="https://wa.me/94XXXXXXXXX"
-                      class="flex-grow bg-primary text-black py-4 font-display font-black text-center text-xs uppercase tracking-[0.2em] border-2 border-black hover:bg-white transition-colors">
-                      ORDER_NOW // WHATSAPP
-                    </a>
-                  </div>
+                <div class="text-right">
+                  <span class="block font-bold text-lg">LKR 9.8K</span>
                 </div>
               </div>
-
-              <!-- Item 02 -->
-              <div
-                class="group relative bg-black border-2 border-accent shadow-brutalist-accent hover:shadow-none transition-all">
-                <div class="aspect-[3/4] overflow-hidden relative">
-                  <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZujhx2dTKXGSWGOUSSRdP_sfyNYSIehePmZBbCMypKLzHtBM-YoElr7Bajoraf-o69zG8rjd8OBKLV5OtdKsB-O-ur66YSOdRYix3ltsEUIwSdsmo-uLV0QnXr3k41sdfpzjmZ7AFVhUo-eBC1D26V2SuNqUmctjKlmCq7rU_Lcn2vd_1C1gBV5Y6MKLR03f4pSxK-jAstUhIhh5zzxyUbIrC0gC6zEiQ0Jmf4xt_D0aKSrjUuifSyhWm7su3HD25nOOvccB3JGSf"
-                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                  <div class="glitch-img-hover absolute inset-0 bg-accent mix-blend-overlay pointer-events-none"></div>
-                  <div
-                    class="absolute top-4 left-4 bg-black text-accent px-2 py-1 font-mono text-[10px] uppercase font-bold tracking-widest border border-accent">
-                    ITEM_REF // 002_ROSE</div>
-                </div>
-                <div class="p-6 flex flex-col gap-4 border-t-2 border-accent">
-                  <div class="flex justify-between items-start">
-                    <h3 class="font-serif text-3xl font-black uppercase tracking-tighter leading-none">Rose<br />Petal.
-                    </h3>
-                    <span class="font-mono text-xl font-bold">LKR 9.8K</span>
-                  </div>
-                  <div class="flex gap-2">
-                    <a href="https://wa.me/94XXXXXXXXX"
-                      class="flex-grow bg-accent text-black py-4 font-display font-black text-center text-xs uppercase tracking-[0.2em] border-2 border-black hover:bg-white transition-colors">
-                      ORDER_NOW // WHATSAPP
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item 03 -->
-              <div
-                class="group relative bg-black border-2 border-primary shadow-brutalist hover:shadow-none transition-all">
-                <div class="aspect-[3/4] overflow-hidden relative">
-                  <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0nnQUPkCEua9n792h7yu0MmJf0TYA6go8L9XlZUK7cDo0vaxkoXsydPS2RjcQLxsozN6eVY0fgwqlgblQ2ERcN8gqsx3buJahR26AAtmMeAzao312cirCjoRWnfS2XTJAPt0j8fuqUC5_5K7Kd5gtfHDa_UQoOkPCE5SuG62MjPeFEUZ2y3No12xJx_Tzm9kAzCYb6KRSra6U9InC1kf_fx9-9hGtwkA95GxhIKI805k7cP-y88ZQwVF_AMegE3MPlyb6H4w9KFio"
-                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                  <div class="glitch-img-hover absolute inset-0 bg-primary mix-blend-overlay pointer-events-none"></div>
-                  <div
-                    class="absolute top-4 left-4 bg-black text-primary px-2 py-1 font-mono text-[10px] uppercase font-bold tracking-widest border border-primary">
-                    ITEM_REF // 003_OLIVE</div>
-                </div>
-                <div class="p-6 flex flex-col gap-4 border-t-2 border-primary">
-                  <div class="flex justify-between items-start">
-                    <h3 class="font-serif text-3xl font-black uppercase tracking-tighter leading-none">Olive<br />Tunic.
-                    </h3>
-                    <span class="font-mono text-xl font-bold">LKR 6.5K</span>
-                  </div>
-                  <div class="flex gap-2">
-                    <a href="https://wa.me/94XXXXXXXXX"
-                      class="flex-grow bg-primary text-black py-4 font-display font-black text-center text-xs uppercase tracking-[0.2em] border-2 border-black hover:bg-white transition-colors">
-                      ORDER_NOW // WHATSAPP
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item 04 -->
-              <div
-                class="group relative bg-black border-2 border-accent shadow-brutalist-accent hover:shadow-none transition-all">
-                <div class="aspect-[3/4] overflow-hidden relative">
-                  <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcT8Fnk3JZ8ytAQQLS_c4Is4PpjmkUNIj2wnvGecMCyh0Yd-Bn5W5Q1KFzeI_hSoN675_W77tLV9gfZCIQpDhuAxkH2tkDEgbat7lmOsW6D3kmIZRj8oR-37IzbS3iwhhvhQ_lrvxTRsdFsA5VQtoKi_kV8A-sQLtne7PIKG9A8bE0eG9muTzAp3DrRzsJFeugDQRcEJDDJUqiBQJGzurDSfdtNbuB3tyyFaFv9w_T4NTYUFZ2vJCiyNmbmeT0CNRy8FaUIi4ypFx2"
-                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                  <div class="glitch-img-hover absolute inset-0 bg-accent mix-blend-overlay pointer-events-none"></div>
-                  <div
-                    class="absolute top-4 left-4 bg-black text-accent px-2 py-1 font-mono text-[10px] uppercase font-bold tracking-widest border border-accent">
-                    ITEM_REF // 004_SILK</div>
-                </div>
-                <div class="p-6 flex flex-col gap-4 border-t-2 border-accent">
-                  <div class="flex justify-between items-start">
-                    <h3 class="font-serif text-3xl font-black uppercase tracking-tighter leading-none">
-                      Midnight<br />Silk.</h3>
-                    <span class="font-mono text-xl font-bold">LKR 18K</span>
-                  </div>
-                  <div class="flex gap-2">
-                    <a href="https://wa.me/94XXXXXXXXX"
-                      class="flex-grow bg-accent text-black py-4 font-display font-black text-center text-xs uppercase tracking-[0.2em] border-2 border-black hover:bg-white transition-colors">
-                      ORDER_NOW // WHATSAPP
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <a href="productpageexample.html"
+                class="block text-center w-full py-3 bg-black text-white font-bold uppercase tracking-widest text-xs hover:bg-accent hover:text-black border-t-2 border-black transition-colors">
+                Secure Unit
+              </a>
             </div>
 
-            <!-- Pagination -->
-            <div class="mt-24 flex justify-center border-t border-primary/20 pt-12">
-              <nav class="flex items-center gap-8 font-mono text-xs font-bold uppercase tracking-widest">
-                <button class="hover:text-primary transition-colors disabled:opacity-50">PREV</button>
-                <div class="flex gap-4 items-center">
-                  <span class="text-primary text-xl">01</span>
-                  <span class="opacity-30">/</span>
-                  <span class="opacity-50">05</span>
+            <!-- Product 03 -->
+            <div
+              class="group relative bg-white border-2 border-black shadow-brutalist transition-transform hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_#000]">
+              <div class="aspect-[3/4] overflow-hidden bg-gray-200 relative">
+                <img alt="Olive Tunic"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0nnQUPkCEua9n792h7yu0MmJf0TYA6go8L9XlZUK7cDo0vaxkoXsydPS2RjcQLxsozN6eVY0fgwqlgblQ2ERcN8gqsx3buJahR26AAtmMeAzao312cirCjoRWnfS2XTJAPt0j8fuqUC5_5K7Kd5gtfHDa_UQoOkPCE5SuG62MjPeFEUZ2y3No12xJx_Tzm9kAzCYb6KRSra6U9InC1kf_fx9-9hGtwkA95GxhIKI805k7cP-y88ZQwVF_AMegE3MPlyb6H4w9KFio" />
+              </div>
+              <div class="pt-6 pb-4 px-4 flex justify-between items-start">
+                <div>
+                  <h3 class="font-serif text-2xl font-bold leading-none mb-1 uppercase italic">Nomad Tunic</h3>
+                  <p class="font-mono text-[10px] text-gray-500 uppercase">Unit_ID: N7-24-03</p>
                 </div>
-                <button class="hover:text-primary transition-colors">NEXT</button>
-              </nav>
+                <div class="text-right">
+                  <span class="block font-bold text-lg">LKR 6.5K</span>
+                </div>
+              </div>
+              <a href="productpageexample.html"
+                class="block text-center w-full py-3 bg-black text-white font-bold uppercase tracking-widest text-xs hover:bg-accent hover:text-black border-t-2 border-black transition-colors">
+                Secure Unit
+              </a>
+            </div>
+
+            <!-- Product 04 -->
+            <div
+              class="group relative bg-white border-2 border-black shadow-brutalist transition-transform hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_#000] mt-12 md:mt-0">
+              <div class="aspect-[3/4] overflow-hidden bg-gray-200 relative">
+                <img alt="Midnight Silk"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcT8Fnk3JZ8ytAQQLS_c4Is4PpjmkUNIj2wnvGecMCyh0Yd-Bn5W5Q1KFzeI_hSoN675_W77tLV9gfZCIQpDhuAxkH2tkDEgbat7lmOsW6D3kmIZRj8oR-37IzbS3iwhhvhQ_lrvxTRsdFsA5VQtoKi_kV8A-sQLtne7PIKG9A8bE0eG9muTzAp3DrRzsJFeugDQRcEJDDJUqiBQJGzurDSfdtNbuB3tyyFaFv9w_T4NTYUFZ2vJCiyNmbmeT0CNRy8FaUIi4ypFx2" />
+              </div>
+              <div class="pt-6 pb-4 px-4 flex justify-between items-start">
+                <div>
+                  <h3 class="font-serif text-2xl font-bold leading-none mb-1 uppercase italic">The Sovereign Abaya</h3>
+                  <p class="font-mono text-[10px] text-gray-500 uppercase">Unit_ID: N7-24-04</p>
+                </div>
+                <div class="text-right">
+                  <span class="block font-bold text-lg">LKR 18K</span>
+                </div>
+              </div>
+              <a href="productpageexample.html"
+                class="block text-center w-full py-3 bg-black text-white font-bold uppercase tracking-widest text-xs hover:bg-accent hover:text-black border-t-2 border-black transition-colors">
+                Secure Unit
+              </a>
             </div>
           </div>
 
+          <!-- Pagination -->
+          <div class="mt-32 flex justify-center">
+            <button
+              class="relative px-12 py-4 bg-transparent text-black border-2 border-black hover:bg-black hover:text-white transition-all duration-100 font-mono text-sm font-bold uppercase tracking-[0.2em] shadow-brutalist hover:shadow-none">
+              Load_More_Units...
+            </button>
+          </div>
         </div>
       </div>
-    </main>
-    <footer class="bg-white text-black py-32 px-4 md:px-12 border-t-2 border-black lg:ml-24">
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-20 px-6 md:px-12">
       <div class="max-w-[1600px] mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
-          <div class="lg:col-span-4 space-y-8">
-            <h2 class="font-serif text-8xl font-black tracking-tighter leading-none">N7 LK.</h2>
-            <p class="font-mono text-sm leading-tight max-w-xs opacity-70">
-              MODERN_MODESTY_SYSTEM // v.2024.01<br />
-              REDEFINING ELEGANCE FOR THE MODERN MUSE.
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 mb-20 border-b border-gray-800 pb-12">
+          <div class="col-span-1 md:col-span-2 lg:col-span-1">
+            <a class="font-serif text-4xl font-black tracking-tighter block mb-6 italic" href="index.html">N7.</a>
+            <p class="text-gray-400 font-mono text-[10px] leading-relaxed max-w-xs uppercase tracking-widest">
+              DNA_ENTRY_v2.0 // Modest fashion deconstructed. Designed in Colombo, Sri Lanka.
             </p>
+          </div>
+          <div>
+            <h4 class="font-bold uppercase tracking-widest text-gray-500 mb-6 text-[10px]">Registry</h4>
+            <ul class="space-y-3 font-mono text-[10px] uppercase tracking-widest">
+              <li><a class="hover:text-accent transition-all inline-block" href="collections.html">New Arrivals</a></li>
+              <li><a class="hover:text-accent transition-all inline-block" href="collections.html">Abayas</a></li>
+              <li><a class="hover:text-accent transition-all inline-block" href="collections.html">Dresses</a></li>
+              <li><a class="hover:text-accent transition-all inline-block" href="collections.html">Sets</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold uppercase tracking-widest text-gray-500 mb-6 text-[10px]">Support</h4>
+            <ul class="space-y-3 font-mono text-[10px] uppercase tracking-widest">
+              <li><a class="hover:text-accent transition-all inline-block" href="about.html">About Us</a></li>
+              <li><a class="hover:text-accent transition-all inline-block" href="#">Logistics</a></li>
+              <li><a class="hover:text-accent transition-all inline-block" href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold uppercase tracking-widest text-gray-500 mb-6 text-[10px]">Social</h4>
             <div class="flex gap-4">
-              <a class="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all"
-                href="#"><span class="material-symbols-outlined">alternate_email</span></a>
-              <a class="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all"
-                href="#"><span class="material-symbols-outlined">call</span></a>
-            </div>
-          </div>
-          <div class="lg:col-span-4 grid grid-cols-2 gap-8 border-l-0 lg:border-l-2 border-black lg:pl-16">
-            <div>
-              <h4 class="font-mono text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">NAVIGATION_MAP</h4>
-              <ul class="space-y-4 font-black uppercase text-sm">
-                <li><a class="hover:text-gray-500 transition-colors" href="index.html">Main_Entry</a></li>
-                <li><a class="hover:text-gray-500 transition-colors" href="collections.html">Registry</a></li>
-                <li><a class="hover:text-gray-500 transition-colors" href="collections.html">Units</a></li>
-                <li><a class="hover:text-gray-500 transition-colors" href="index.html#about">About_DNA</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-mono text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">PROTOCOL_HELP</h4>
-              <ul class="space-y-4 font-black uppercase text-sm">
-                <li><a class="hover:text-gray-500 transition-colors" href="#">Returns</a></li>
-                <li><a class="hover:text-gray-500 transition-colors" href="#">Sizing</a></li>
-                <li><a class="hover:text-gray-500 transition-colors" href="#">Contact</a></li>
-                <li><a class="hover:text-gray-500 transition-colors" href="index.html#about">Our Story</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="lg:col-span-4 border-l-0 lg:border-l-2 border-black lg:pl-16">
-            <h4 class="font-mono text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">SYSTEM_FAQ</h4>
-            <div class="space-y-4">
-              <details class="group border-2 border-black overflow-hidden">
-                <summary
-                  class="flex justify-between items-center font-black uppercase cursor-pointer p-4 text-xs hover:bg-primary transition-all">
-                  <span>Shipping_Time</span>
-                  <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-                </summary>
-                <div class="p-4 pt-0 font-mono text-[10px] leading-tight opacity-70">Colombo: 1-2 Days. Others: 3-4
-                  Days.</div>
-              </details>
-              <details class="group border-2 border-black overflow-hidden">
-                <summary
-                  class="flex justify-between items-center font-black uppercase cursor-pointer p-4 text-xs hover:bg-primary transition-all">
-                  <span>Exchanges</span>
-                  <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-                </summary>
-                <div class="p-4 pt-0 font-mono text-[10px] leading-tight opacity-70">7-Day Protocol for Size Issues.
-                  Item must be unworn.</div>
-              </details>
+              <a class="w-10 h-10 border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors font-mono text-[10px]"
+                href="#">IG</a>
+              <a class="w-10 h-10 border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors font-mono text-[10px]"
+                href="#">FB</a>
+              <a class="w-10 h-10 border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors font-mono text-[10px]"
+                href="#">TK</a>
             </div>
           </div>
         </div>
         <div
-          class="pt-8 border-t-2 border-black flex flex-col md:flex-row justify-between items-center gap-4 font-mono text-[10px] font-bold uppercase tracking-widest">
-          <p>© 2024 N7 LK // POWERED BY MODESTY_CORE</p>
-          <div class="flex gap-8">
-            <a class="hover:underline" href="#">Privacy_Policy</a>
-            <a class="hover:underline" href="#">Terms_Service</a>
+          class="flex flex-col md:flex-row justify-between items-end text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+          <p>© 2024 N7 LK // ALL_RIGHTS_RESERVED.</p>
+          <div class="flex gap-8 mt-4 md:mt-0">
+            <span>MADE WITH INTENTION IN COLOMBO</span>
+            <span>LKR</span>
           </div>
         </div>
       </div>
     </footer>
-
-    </div>
-
+  </main>
 </body>
-
 
 </html>
