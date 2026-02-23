@@ -1,0 +1,572 @@
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>N7 LK | CYBER_MODESTY_ROOT</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;900&family=Cinzel:wght@400;900&family=Space+Grotesk:wght@300;700&family=Syncopate:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#CAFF33", // Cyber Neon Yellow
+            "accent": "#00E0FF", // Electric Blue
+            "background-dark": "#050505",
+            "surface-dark": "#0A0A0A",
+            "dim": "#333333",
+            "text-main": "#FFFFFF",
+          },
+          fontFamily: {
+            "sans": ["Archivo", "sans-serif"],
+            "serif": ["Cinzel", "serif"],
+            "mono": ["Space Grotesk", "monospace"],
+            "display": ["Syncopate", "sans-serif"],
+          },
+          boxShadow: {
+            'brutalist': '8px 8px 0px 0px #CAFF33',
+            'brutalist-accent': '8px 8px 0px 0px #00E0FF',
+            'brutalist-sm': '4px 4px 0px 0px #CAFF33',
+          },
+          animation: {
+            'marquee': 'marquee 25s linear infinite',
+            'glitch': 'glitch 0.3s infinite linear alternate-reverse',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-100%)' },
+            },
+            glitch: {
+              '0%': { clipPath: 'inset(10% 0 80% 0)', transform: 'translate(-2px, 1px)' },
+              '100%': { clipPath: 'inset(60% 0 30% 0)', transform: 'translate(2px, -1px)' },
+            }
+          }
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    body {
+            background-color: #050505;
+            background-image: linear-gradient(rgba(202, 255, 51, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(202, 255, 51, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .outline-text {
+            -webkit-text-stroke: 1.5px white; 
+            color: transparent;
+        }
+        .vertical-nav {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+  class="bg-background-dark text-white font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-black">
+  <!-- Desktop Vertical Nav -->
+  <nav
+    class="fixed left-0 top-0 h-full w-24 bg-black border-r-2 border-primary z-[100] hidden lg:flex flex-col items-center py-12 gap-16">
+    <a href="index.html"
+      class="font-serif text-3xl font-black -rotate-90 tracking-tighter hover:text-primary transition-colors">N7.</a>
+    <div class="flex-grow flex flex-col justify-center gap-12 -rotate-90 overflow-visible w-24">
+      <a href="collections.html"
+        class="font-display text-[10px] font-bold tracking-[0.4em] hover:text-primary transition-all flex items-center gap-4">
+        <span class="w-2 h-2 bg-primary"></span> REGISTRY.
+      </a>
+      <a href="about.html"
+        class="font-display text-[10px] font-bold tracking-[0.4em] hover:text-primary transition-all flex items-center gap-4">
+        MANIFESTO.
+      </a>
+      <a href="#"
+        class="font-display text-[10px] font-bold tracking-[0.4em] hover:text-primary transition-all flex items-center gap-4">
+        JOURNAL_LOG.
+      </a>
+    </div>
+    <button
+      class="bg-primary text-black p-4 border-2 border-black shadow-brutalist hover:shadow-none translate-x-1 transition-all">
+      <span class="material-symbols-outlined font-black">shopping_bag</span>
+    </button>
+  </nav>
+
+  <!-- Fixed Desktop Vertical Nav ends above -->
+
+  <main class="lg:pl-24 pt-16 lg:pt-0">
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex flex-col justify-center overflow-hidden border-b-2 border-primary/20">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-cover bg-center grayscale opacity-40 mix-blend-screen"
+          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAN9w_ba4Od3W4V1iX8wEgr_8bAMELqSPf9v5jYVrH3-Dyz-zlaJ010WCnyl5BVyZeKSxNoMwAcg2q_b-jvUzE04SrWfnPUHhCqqhRUB5XM3ltkw4441ObVi5y4ksc3ohmP-QzZyMHwoF_jVb38rsJX5ZSP2NOof0DJU4pYW-8GURQ08gUnRmP7_uuAGLzA8z4J-4AUHMWolrPbsfFmVGppg_DUZ7qN7rkDgzL_HlKYaHnjn_6sHTyl8kEzpMSsLNM-1l0t9VmMRPkd');">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60"></div>
+      </div>
+
+      <div class="px-6 lg:px-12 relative z-10">
+        <div class="max-w-4xl space-y-12">
+          <div class="space-y-4">
+            <span
+              class="font-mono text-[10px] font-black tracking-[0.4em] text-primary uppercase animate-pulse">SYSTEM_INITIALIZED
+              // DOMAIN_ROOT</span>
+            <h1
+              class="font-serif text-[12vw] lg:text-[10vw] font-black italic tracking-tighter uppercase leading-[0.8] mb-8">
+              BOLDLY.<br />
+              <span class="outline-text">MODEST.</span>
+            </h1>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-12 items-start">
+            <div class="space-y-6 max-w-sm">
+              <p class="font-mono text-xs uppercase tracking-widest leading-relaxed opacity-60">
+                DECONSTRUCTING MODESTY THROUGH ARCHITECTURAL GEOMETRY. ENGINEERED SILHOUETTES FOR THE COSMOPOLITAN
+                SURVIVOR.
+              </p>
+              <div class="flex gap-4">
+                <a href="collections.html"
+                  class="bg-primary text-black px-8 py-4 font-display font-black text-[10px] uppercase tracking-[0.3em] border-2 border-black shadow-brutalist hover:shadow-none transition-all">INITIALIZE_SHOP</a>
+                <a href="about.html"
+                  class="px-8 py-4 border-2 border-white/20 text-white font-display font-black text-[10px] uppercase tracking-[0.3em] hover:border-primary hover:text-primary transition-all">MANIFESTO.</a>
+              </div>
+            </div>
+
+            <div class="hidden md:block mt-2">
+              <div
+                class="border-2 border-accent p-6 bg-black/40 backdrop-blur-xl shadow-brutalist-accent max-w-[240px] -rotate-2">
+                <span class="font-mono text-[8px] opacity-40 tracking-widest">DRIVE_UNIT:024</span>
+                <h3 class="font-serif text-lg font-black uppercase tracking-tighter mt-1">THE_SILK_DRAPE</h3>
+                <p class="font-mono text-[10px] text-accent mt-2 font-bold tracking-widest">LKR 12,500</p>
+                <div class="h-1 w-full bg-accent/20 mt-4 overflow-hidden">
+                  <div class="h-full bg-accent w-1/3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee Overlay -->
+      <div class="absolute bottom-0 w-full overflow-hidden bg-primary border-y-2 border-black py-2 whitespace-nowrap">
+        <div
+          class="inline-block animate-marquee font-display font-black text-[10px] uppercase tracking-[0.5em] text-black">
+          N7 LK // SURVIVAL_SILHOUETTES // ARCHITECTURAL_MODESTY // DNA_ENTRY_2024 // N7 LK // SURVIVAL_SILHOUETTES //
+          ARCHITECTURAL_MODESTY // DNA_ENTRY_2024 //
+        </div>
+        <div
+          class="absolute top-0 inline-block animate-marquee font-display font-black text-[10px] uppercase tracking-[0.5em] text-black"
+          style="animation-delay: 12.5s">
+          N7 LK // SURVIVAL_SILHOUETTES // ARCHITECTURAL_MODESTY // DNA_ENTRY_2024 // N7 LK // SURVIVAL_SILHOUETTES //
+          ARCHITECTURAL_MODESTY // DNA_ENTRY_2024 //
+        </div>
+      </div>
+    </section>
+
+    </div>
+    </section>
+
+    <section class="border-y-2 border-black bg-accent overflow-hidden py-4">
+      <div class="whitespace-nowrap animate-marquee flex items-center">
+        <span class="text-4xl font-black font-sans uppercase mx-8">Radical Modesty</span>
+        <span class="text-4xl font-serif italic mx-8">///</span>
+        <span class="text-4xl font-black font-sans uppercase mx-8 outline-text text-black">Defined Elegance</span>
+        <span class="text-4xl font-serif italic mx-8">///</span>
+        <span class="text-4xl font-black font-sans uppercase mx-8">N7 N7 N7</span>
+        <span class="text-4xl font-serif italic mx-8">///</span>
+        <span class="text-4xl font-black font-sans uppercase mx-8 outline-text text-black">Colombo Heritage</span>
+        <span class="text-4xl font-serif italic mx-8">///</span>
+        <span class="text-4xl font-black font-sans uppercase mx-8">Radical Modesty</span>
+        <span class="text-4xl font-serif italic mx-8">///</span>
+        <span class="text-4xl font-black font-sans uppercase mx-8 outline-text text-black">Defined Elegance</span>
+        <span class="text-4xl font-serif italic mx-8">///</span>
+        <span class="text-4xl font-black font-sans uppercase mx-8">N7 N7 N7</span>
+        <span class="text-4xl font-serif italic mx-8">///</span>
+        <span class="text-4xl font-black font-sans uppercase mx-8 outline-text text-black">Colombo Heritage</span>
+        <span class="text-4xl font-serif italic mx-8">///</span>
+      </div>
+    </section>
+    <section class="py-24 px-4 md:px-12 bg-white relative border-b-2 border-black">
+      <div class="max-w-[1600px] mx-auto relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div>
+            <span class="font-mono text-xs font-bold uppercase tracking-widest text-gray-400">SERIES_01 //
+              CATEGORIES</span>
+            <h2 class="font-serif text-5xl md:text-7xl font-black uppercase leading-none mt-2">The Collection</h2>
+          </div>
+          <a class="px-6 py-3 border-2 border-black font-bold uppercase tracking-widest hover:bg-black hover:text-accent transition-all flex items-center gap-2"
+            href="collections.html">
+            View All Categories
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <a class="group relative aspect-[3/4] overflow-hidden border-2 border-black shadow-brutalist hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+            href="collections.html">
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD84ttOIuCLFDaOQFCSS69zPKSnMT0eFyIpR7ngMUjQm1yx5Re9KWw_UfRe5NlUKQxnHMRc8ZeS2xwjrSXGQIns1AiGAQxLD-QdfalSyMbap0LR_bF297hzUi6l_3zUQCFKpK99ffdu7FozHGk9OGX5fyKWz7H5Die57puWNDO8sE63ftUe13KYzxweimaLeCF4JslYZq_WNnWYOfdrTbWI-3RYK0vyG4azU19WVq-Kb4bVJqftQ3HlobgPQJo42kbYc-6q5kyyJwZP');">
+            </div>
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute bottom-6 left-6 right-6 p-4 bg-white border-2 border-black">
+              <span class="text-xs font-mono font-bold uppercase tracking-widest text-gray-400">01_DRESSES</span>
+              <h3 class="text-2xl font-black uppercase">Modest Dresses</h3>
+              <span
+                class="material-symbols-outlined absolute top-4 right-4 group-hover:rotate-45 transition-transform">arrow_outward</span>
+            </div>
+          </a>
+
+          <a class="group relative aspect-[3/4] overflow-hidden border-2 border-black shadow-brutalist hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all lg:-mt-12"
+            href="collections.html">
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkisu4IYwy57QrFSNzgVy9hn4iEilnDxIcPgcy4LvDp0ELaprYC9bTDFqF-ZiQHw19HuC7sUnutSszpIi2N2R9Ocjmamd_DUuoqjnhs7-uZ-TEMbcRZcKWHgbFfJH86RVh4O_6qNNQdYYNatQnQZcrR_x0Ig5fsdpVYOfzGNa4L9mWw_BGhz91Fvp9rE_vJeEXDUNwPsP4RI345crV2is99VfLIamoShiYiC0vQkw7I3vrJ2kD4alxoSJZVsqO02mEyrzysKzNGqKo');">
+            </div>
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute bottom-6 left-6 right-6 p-4 bg-white border-2 border-black">
+              <span class="text-xs font-mono font-bold uppercase tracking-widest text-gray-400">02_ABAYAS</span>
+              <h3 class="text-2xl font-black uppercase">Signature Abayas</h3>
+              <span
+                class="material-symbols-outlined absolute top-4 right-4 group-hover:rotate-45 transition-transform">arrow_outward</span>
+            </div>
+          </a>
+
+          <a class="group relative aspect-[3/4] overflow-hidden border-2 border-black shadow-brutalist hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+            href="collections.html">
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCb71pp0gRICPvDsEIF7zDBX3ULlT8AYeT2jFLc0xUTDQodmaST6PTnx2dtVBr1qkdpLRizkMz_lPsQuGXGnvb2gz886x8MDGG0wscfHDaFl1qejkKywn-fw7wp7sVCcMdg2g-okUSQlYvSWDiAz37O6deMVteDXfMqgkahr3EojsZ_MLXGLuvWMU888HPD64ZtHkHDnMU1ozpHFgxMH51oAHoKzkNmvZ67PZLIf9XZaCZ5IcaozSclkOeXXm1UfOKpm6Ou_EPJAgIH');">
+            </div>
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="absolute bottom-6 left-6 right-6 p-4 bg-white border-2 border-black">
+              <span class="text-xs font-mono font-bold uppercase tracking-widest text-gray-400">03_SETS</span>
+              <h3 class="text-2xl font-black uppercase">Co-ord Sets</h3>
+              <span
+                class="material-symbols-outlined absolute top-4 right-4 group-hover:rotate-45 transition-transform">arrow_outward</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-accent/30 text-black overflow-hidden border-b-2 border-black">
+      <div class="max-w-[1600px] mx-auto px-4 md:px-12">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          <div class="w-full lg:w-2/5">
+            <span
+              class="bg-black text-white px-2 py-1 font-mono text-xs uppercase tracking-widest mb-4 inline-block">MANIFESTO_CRAFT.VOL_01</span>
+            <h2 class="font-serif text-5xl md:text-7xl mb-8 leading-none uppercase font-black italic">Artistry in
+              <br />Every Thread
+            </h2>
+            <p class="text-lg font-mono leading-tight mb-8 max-w-sm">
+              Sourcing the finest linen, heavyweight satin, and breathable crepe. Tactical luxury for the modern muse.
+            </p>
+            <div class="flex flex-col gap-8">
+              <div class="flex items-start gap-4 p-4 border-2 border-dashed border-black">
+                <span class="material-symbols-outlined text-4xl">spa</span>
+                <div>
+                  <h4 class="font-bold uppercase text-lg">Sustainable Linen</h4>
+                  <p class="text-sm font-mono opacity-70">Ethically sourced, naturally cooling.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-4 border-2 border-dashed border-black">
+                <span class="material-symbols-outlined text-4xl">auto_awesome</span>
+                <div>
+                  <h4 class="font-bold uppercase text-lg">Hand-Embroidery</h4>
+                  <p class="text-sm font-mono opacity-70">Intricate detailing by master artisans.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-3/5 grid grid-cols-2 gap-px bg-black border-2 border-black p-px">
+            <div class="aspect-square bg-gray-200 overflow-hidden relative group border border-black">
+              <div
+                class="absolute inset-0 bg-cover bg-center transition-transform duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3VJVCamwuHXfKmU6TRqDtcDWpB_krLfx6z9lpldD0o4N5Qwq8nCkz2DkTKOFV5wwnNuxIAVeeMjBrL_OwI6gDEXNwMITxKQ8ntoNheGVOjmPs-Vp4MQ2eLThtikv0U1b1_I4wfIdmk4yljDWE6iN9CoB1HL6DqsgI0RQFJkmHCFX8ugtSKmBnmuQFg4sLtoDBfe8FHPysRMkxSfye2tcYqFQaS4ntcjpihaMGWqtobpwWL1lDaTJGEop_M5L6K5mt6n49OHS72dt');">
+              </div>
+              <div
+                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                <span
+                  class="text-white font-mono text-xs font-bold uppercase tracking-widest border border-white p-2">DECONSTRUCT_01</span>
+              </div>
+            </div>
+            <div
+              class="aspect-square bg-gray-200 overflow-hidden relative group border border-black translate-y-4 lg:translate-y-8">
+              <div
+                class="absolute inset-0 bg-cover bg-center transition-transform duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCb71pp0gRICPvDsEIF7zDBX3ULlT8AYeT2jFLc0xUTDQodmaST6PTnx2dtVBr1qkdpLRizkMz_lPsQuGXGnvb2gz886x8MDGG0wscfHDaFl1qejkKywn-fw7wp7sVCcMdg2g-okUSQlYvSWDiAz37O6deMVteDXfMqgkahr3EojsZ_MLXGLuvWMU888HPD64ZtHkHDnMU1ozpHFgxMH51oAHoKzkNmvZ67PZLIf9XZaCZ5IcaozSclkOeXXm1UfOKpm6Ou_EPJAgIH');">
+              </div>
+              <div
+                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                <span
+                  class="text-white font-mono text-xs font-bold uppercase tracking-widest border border-white p-2">DECONSTRUCT_02</span>
+              </div>
+            </div>
+            <div
+              class="aspect-square bg-gray-200 overflow-hidden relative group border border-black -translate-y-4 lg:-translate-y-8">
+              <div
+                class="absolute inset-0 bg-cover bg-center transition-transform duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD84ttOIuCLFDaOQFCSS69zPKSnMT0eFyIpR7ngMUjQm1yx5Re9KWw_UfRe5NlUKQxnHMRc8ZeS2xwjrSXGQIns1AiGAQxLD-QdfalSyMbap0LR_bF297hzUi6l_3zUQCFKpK99ffdu7FozHGk9OGX5fyKWz7H5Die57puWNDO8sE63ftUe13KYzxweimaLeCF4JslYZq_WNnWYOfdrTbWI-3RYK0vyG4azU19WVq-Kb4bVJqftQ3HlobgPQJo42kbYc-6q5kyyJwZP');">
+              </div>
+              <div
+                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                <span
+                  class="text-white font-mono text-xs font-bold uppercase tracking-widest border border-white p-2">DECONSTRUCT_03</span>
+              </div>
+            </div>
+            <div class="aspect-square bg-gray-200 overflow-hidden relative group border border-black">
+              <div
+                class="absolute inset-0 bg-cover bg-center transition-transform duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkisu4IYwy57QrFSNzgVy9hn4iEilnDxIcPgcy4LvDp0ELaprYC9bTDFqF-ZiQHw19HuC7sUnutSszpIi2N2R9Ocjmamd_DUuoqjnhs7-uZ-TEMbcRZcKWHgbFfJH86RVh4O_6qNNQdYYNatQnQZcrR_x0Ig5fsdpVYOfzGNa4L9mWw_BGhz91Fvp9rE_vJeEXDUNwPsP4RI345crV2is99VfLIamoShiYiC0vQkw7I3vrJ2kD4alxoSJZVsqO02mEyrzysKzNGqKo');">
+              </div>
+              <div
+                class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+                <span
+                  class="text-white font-mono text-xs font-bold uppercase tracking-widest border border-white p-2">DECONSTRUCT_04</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-white relative border-b-2 border-black">
+      <div class="max-w-[1440px] mx-auto px-4 md:px-12 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+          <div class="w-full lg:w-1/2 relative">
+            <div class="aspect-[4/5] w-full border-2 border-black shadow-brutalist overflow-hidden relative group">
+              <div
+                class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 grayscale group-hover:grayscale-0 group-hover:scale-105"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAN9w_ba4Od3W4V1iX8wEgr_8bAMELqSPf9v5jYVrH3-Dyz-zlaJ010WCnyl5BVyZeKSxNoMwAcg2q_b-jvUzE04SrWfnPUHhCqqhRUB5XM3ltkw4441ObVi5y4ksc3ohmP-QzZyMHwoF_jVb38rsJX5ZSP2NOof0DJU4pYW-8GURQ08gUnRmP7_uuAGLzA8z4J-4AUHMWolrPbsfFmVGppg_DUZ7qN7rkDgzL_HlKYaHnjn_6sHTyl8kEzpMSsLNM-1l0t9VmMRPkd');">
+              </div>
+              <div
+                class="absolute top-6 left-6 bg-accent border-2 border-black px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest">
+                #MUSE_SESSION_024
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <div class="mb-4">
+              <span class="font-mono text-xs font-bold uppercase tracking-widest text-gray-400">CURATED_ITEM //
+                PICK_01</span>
+              <h2 class="font-serif text-5xl md:text-7xl font-black uppercase leading-none mt-2">The Zahra Ensemble</h2>
+            </div>
+            <div class="flex items-center gap-4 mb-8">
+              <span class="text-3xl font-black">LKR 12,500</span>
+              <span class="text-gray-400 line-through text-lg font-mono">LKR 14,000</span>
+            </div>
+            <div class="bg-accent/50 p-8 border-2 border-black mb-8 relative">
+              <div class="absolute -top-4 -left-4 bg-black text-white px-3 py-1 text-xs font-mono uppercase">
+                Stylist_Note</div>
+              <p class="font-mono text-lg leading-tight italic">
+                "Pair this flowing silhouette with minimal gold jewelry and a structured handbag. Perfect for afternoon
+                tea or an elegant evening gathering."
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-6">
+              <button
+                class="flex-1 bg-black text-white px-8 py-5 border-2 border-black shadow-brutalist hover:bg-accent hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all font-black uppercase tracking-widest flex items-center justify-center gap-3">
+                <img alt="WhatsApp" class="w-6 h-6 filter brightness-0 invert group-hover:invert-0"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl1tAaC3l5slhYXQIl9MfdCMf4kCtD38-x3TAGKneiROuOxU5s5e-Noaq_c9FMlOm_2Ybk6H5zXEPOMrExN-Wu2Nr5ZgWXtiuY6z6H5g7rMjPfkyEnK-kyKjJBPtYi71XVDZ8X1R9bItiiM98HoXT9tQBC0xpCilvCUOHEBJeBXjCK9RnehRLxWD3HcwCFjgHyEDHDEVdKzOwgGwMXv5mrgsVDQyyo7P93P1kjhXojxWBAYAAmlvW8nmnDlsRyUzHGW74Ax_SZhxR4" />
+                Order via WA
+              </button>
+              <button
+                class="flex-1 border-2 border-black px-8 py-5 font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all">
+                Registry View
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =================== ABOUT SECTION =================== -->
+    <section id="about" class="py-32 bg-charcoal text-white relative overflow-hidden">
+      <!-- Subtle background texture -->
+      <div
+        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.04] pointer-events-none">
+      </div>
+      <!-- Decorative vertical line -->
+      <div class="absolute left-1/2 top-0 w-px h-24 bg-primary/40 -translate-x-1/2"></div>
+
+      <div class="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+
+        <!-- Section label -->
+        <div class="flex flex-col items-center text-center mb-24">
+          <span
+            class="bg-accent text-black px-3 py-1 font-mono text-xs font-bold uppercase tracking-[0.35em] mb-6 inline-block">THE_STORY
+            // COLOMBO_DNA</span>
+          <h2 class="font-serif text-6xl md:text-8xl lg:text-[10rem] font-black leading-[0.8] uppercase mb-12">
+            Born in<br />
+            <span class="outline-text text-white">Colombo.</span><br />
+            Worn Everywhere.
+          </h2>
+          <p class="text-xl md:text-2xl font-mono max-w-2xl leading-tight opacity-80">
+            N7 LK was founded on a single belief — that modest dressing is a canvas for extraordinary self-expression.
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center mb-32">
+          <div class="w-full lg:w-1/2 space-y-10">
+            <p class="text-2xl font-serif italic leading-tight border-l-4 border-accent pl-8 py-4">
+              "We started in a small studio in Nugegoda with bolts of fabric, a dream, and an obsession with the perfect
+              drape."
+            </p>
+            <p class="text-lg font-mono opacity-60 leading-tight">
+              What began as a passion project between two sisters has grown into Sri Lanka's most-loved modest luxury
+              label. We design in Colombo, source locally, and craft every garment with intention.
+            </p>
+
+            <div class="grid grid-cols-3 gap-px bg-white/20 border-2 border-white/20">
+              <div class="bg-black p-6 border border-white/10">
+                <span class="block font-serif text-5xl font-black">4+</span>
+                <span class="text-[10px] font-mono uppercase tracking-widest opacity-50 mt-2 block">Years_Craft</span>
+              </div>
+              <div class="bg-black p-6 border border-white/10">
+                <span class="block font-serif text-5xl font-black">200+</span>
+                <span class="text-[10px] font-mono uppercase tracking-widest opacity-50 mt-2 block">Design_Units</span>
+              </div>
+              <div class="bg-black p-6 border border-white/10">
+                <span class="block font-serif text-5xl font-black">10K+</span>
+                <span class="text-[10px] font-mono uppercase tracking-widest opacity-50 mt-2 block">Muse_Registry</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-1/2 relative">
+            <div class="grid grid-cols-2 gap-4">
+              <div
+                class="aspect-[3/4] border-2 border-white grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD84ttOIuCLFDaOQFCSS69zPKSnMT0eFyIpR7ngMUjQm1yx5Re9KWw_UfRe5NlUKQxnHMRc8ZeS2xwjrSXGQIns1AiGAQxLD-QdfalSyMbap0LR_bF297hzUi6l_3zUQCFKpK99ffdu7FozHGk9OGX5fyKWz7H5Die57puWNDO8sE63ftUe13KYzxweimaLeCF4JslYZq_WNnWYOfdrTbWI-3RYK0vyG4azU19WVq-Kb4bVJqftQ3HlobgPQJo42kbYc-6q5kyyJwZP"
+                  class="w-full h-full object-cover" />
+              </div>
+              <div
+                class="aspect-[3/4] border-2 border-white grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden mt-12">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkisu4IYwy57QrFSNzgVy9hn4iEilnDxIcPgcy4LvDp0ELaprYC9bTDFqF-ZiQHw19HuC7sUnutSszpIi2N2R9Ocjmamd_DUuoqjnhs7-uZ-TEMbcRZcKWHgbFfJH86RVh4O_6qNNQdYYNatQnQZcrR_x0Ig5fsdpVYOfzGNa4L9mWw_BGhz91Fvp9rE_vJeEXDUNwPsP4RI345crV2is99VfLIamoShiYiC0vQkw7I3vrJ2kD4alxoSJZVsqO02mEyrzysKzNGqKo"
+                  class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div
+              class="absolute -bottom-8 -left-8 bg-accent text-black px-6 py-4 border-2 border-black hidden md:block rotate-[-2deg]">
+              <span class="block text-xs font-mono font-bold uppercase tracking-widest">ORIGIN_PROTOCOL</span>
+              <span class="block font-serif text-2xl font-black uppercase">MADE IN SRI LANKA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/20 border-2 border-white/20">
+          <div class="bg-black p-10 hover:bg-accent hover:text-black transition-all group">
+            <span class="material-symbols-outlined text-5xl mb-6 block">spa</span>
+            <h4 class="font-serif text-3xl font-black uppercase mb-4 leading-tight">Ethical by<br />Design</h4>
+            <p class="font-mono text-sm leading-tight opacity-60 group-hover:opacity-100">Responsibly sourced.
+              Colombo-based artisans. Fair wage protocol.</p>
+          </div>
+          <div class="bg-black p-10 hover:bg-accent hover:text-black transition-all group">
+            <span class="material-symbols-outlined text-5xl mb-6 block">diamond</span>
+            <h4 class="font-serif text-3xl font-black uppercase mb-4 leading-tight">Luxury Without<br />Compromise</h4>
+            <p class="font-mono text-sm leading-tight opacity-60 group-hover:opacity-100">Premium heavy satin. Pure
+              linen. Breathable crepe.</p>
+          </div>
+          <div class="bg-black p-10 hover:bg-accent hover:text-black transition-all group">
+            <span class="material-symbols-outlined text-5xl mb-6 block">diversity_3</span>
+            <h4 class="font-serif text-3xl font-black uppercase mb-4 leading-tight">For Every<br />Woman</h4>
+            <p class="font-mono text-sm leading-tight opacity-60 group-hover:opacity-100">Inclusive sizing. Custom
+              lengths. Modesty celebrated.</p>
+          </div>
+        </div>
+
+        <div class="mt-20 text-center">
+          <a href="collections.html"
+            class="inline-block px-12 py-6 bg-accent text-black font-black uppercase tracking-widest border-2 border-black hover:bg-white transition-all shadow-brutalist hover:shadow-none hover:translate-x-1 hover:translate-y-1">
+            Explore Registry_v1
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <!-- =================== END ABOUT SECTION =================== -->
+
+    <footer class="bg-white text-black py-20 px-4 md:px-12 border-t-2 border-black">
+      <div class="max-w-[1600px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+          <div class="lg:col-span-4 space-y-8">
+            <h2 class="font-serif text-8xl font-black tracking-tighter leading-none">N7 LK.</h2>
+            <p class="font-mono text-sm leading-tight max-w-xs opacity-70">
+              MODERN_MODESTY_SYSTEM // v.2024.01<br />
+              REDEFINING ELEGANCE FOR THE MODERN MUSE.
+            </p>
+            <div class="flex gap-4">
+              <a class="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all"
+                href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+              <a class="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all"
+                href="#"><span class="material-symbols-outlined">call</span></a>
+            </div>
+          </div>
+          <div class="lg:col-span-4 grid grid-cols-2 gap-8 border-l-0 lg:border-l-2 border-black lg:pl-16">
+            <div>
+              <h4 class="font-mono text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">NAVIGATION_MAP</h4>
+              <ul class="space-y-4 font-black uppercase text-sm">
+                <li><a class="hover:text-gray-500 transition-colors" href="collections.html#new-in">New Arrivals</a>
+                </li>
+                <li><a class="hover:text-gray-500 transition-colors" href="collections.html">Abayas</a></li>
+                <li><a class="hover:text-gray-500 transition-colors" href="collections.html">Dresses</a></li>
+                <li><a class="hover:text-gray-500 transition-colors" href="collections.html">Sets</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-mono text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">PROTOCOL_HELP</h4>
+              <ul class="space-y-4 font-black uppercase text-sm">
+                <li><a class="hover:text-gray-500 transition-colors" href="#">Returns</a></li>
+                <li><a class="hover:text-gray-500 transition-colors" href="#">Sizing</a></li>
+                <li><a class="hover:text-gray-500 transition-colors" href="#">Contact</a></li>
+                <li><a class="hover:text-gray-500 transition-colors" href="#about">Our Story</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lg:col-span-4 border-l-0 lg:border-l-2 border-black lg:pl-16">
+            <h4 class="font-mono text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">SYSTEM_FAQ</h4>
+            <div class="space-y-4">
+              <details class="group border-2 border-black overflow-hidden">
+                <summary
+                  class="flex justify-between items-center font-black uppercase cursor-pointer p-4 text-xs hover:bg-accent transition-all">
+                  <span>Shipping_Time</span>
+                  <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                </summary>
+                <div class="p-4 pt-0 font-mono text-[10px] leading-tight opacity-70">Colombo: 1-2 Days. Others: 3-4
+                  Days.</div>
+              </details>
+              <details class="group border-2 border-black overflow-hidden">
+                <summary
+                  class="flex justify-between items-center font-black uppercase cursor-pointer p-4 text-xs hover:bg-accent transition-all">
+                  <span>Exchanges</span>
+                  <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                </summary>
+                <div class="p-4 pt-0 font-mono text-[10px] leading-tight opacity-70">7-Day Protocol for Size Issues.
+                  Item must be unworn.</div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t-2 border-black flex flex-col md:flex-row justify-between items-center gap-4 font-mono text-[10px] font-bold uppercase tracking-widest">
+          <p>© 2024 N7 LK // POWERED BY MODESTY_CORE</p>
+          <div class="flex gap-8">
+            <a class="hover:underline" href="#">Privacy_Policy</a>
+            <a class="hover:underline" href="#">Terms_Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </div>
+
+</body>
+
+</html>

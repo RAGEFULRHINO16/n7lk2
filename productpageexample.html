@@ -1,0 +1,513 @@
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>N7 LK - PRODUCT_REGISTRY // THE_SERENE</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;900&family=Cinzel:wght@400;900&family=Space+Grotesk:wght@300;700&family=Syncopate:wght@400;700&family=Manrope:wght@200;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#CAFF33", // Cyber Neon Yellow
+                        "accent": "#00E0FF", // Electric Blue
+                        "background-dark": "#050505",
+                        "surface-dark": "#0A0A0A",
+                        "dim": "#333333",
+                        "text-main": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "sans": ["Archivo", "sans-serif"],
+                        "serif": ["Cinzel", "serif"],
+                        "mono": ["Space Mono", "monospace"],
+                        "display": ["Syncopate", "sans-serif"],
+                    },
+                    boxShadow: {
+                        'brutalist': '8px 8px 0px 0px #CAFF33',
+                        'brutalist-accent': '8px 8px 0px 0px #00E0FF',
+                        'brutalist-white': '8px 8px 0px 0px #FFFFFF',
+                    },
+                    animation: {
+                        'marquee': 'marquee 20s linear infinite',
+                        'glitch': 'glitch 0.3s infinite linear alternate-reverse',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        glitch: {
+                            '0%': { clipPath: 'inset(10% 0 80% 0)', transform: 'translate(-2px, 1px)' },
+                            '100%': { clipPath: 'inset(60% 0 30% 0)', transform: 'translate(2px, -1px)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .glitch-container:hover .glitch-img {
+            animation: glitch 0.3s infinite linear alternate-reverse;
+        }
+
+        .glitch-img-hover {
+            opacity: 0;
+            transition: opacity 0.1s steps(2, end);
+        }
+
+        .group:hover .glitch-img-hover {
+            opacity: 1;
+            animation: glitch 0.3s infinite linear alternate-reverse;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-dark text-white min-h-screen font-sans selection:bg-primary selection:text-black overflow-x-hidden">
+    <!-- Desktop Vertical Nav -->
+    <nav
+        class="fixed left-0 top-0 h-full w-24 bg-black border-r-2 border-primary z-[100] hidden lg:flex flex-col items-center py-12 gap-16">
+        <a href="index.html"
+            class="font-serif text-3xl font-black -rotate-90 tracking-tighter hover:text-primary transition-colors">N7.</a>
+        <div class="flex-grow flex flex-col justify-center gap-12 -rotate-90 overflow-visible w-24">
+            <a href="collections.html"
+                class="font-display text-[10px] font-bold tracking-[0.4em] text-primary transition-all flex items-center gap-4">
+                <span class="w-2 h-2 bg-primary"></span> REGISTRY.
+            </a>
+            <a href="about.html"
+                class="font-display text-[10px] font-bold tracking-[0.4em] hover:text-primary transition-all flex items-center gap-4">
+                MANIFESTO.
+            </a>
+        </div>
+        <button
+            class="bg-primary text-black p-4 border-2 border-black shadow-brutalist hover:shadow-none translate-x-1 transition-all">
+            <span class="material-symbols-outlined font-black">shopping_bag</span>
+        </button>
+    </nav>
+
+    <!-- Mobile Header -->
+    <header
+        class="lg:hidden fixed top-0 w-full bg-black border-b-2 border-primary z-[100] px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="font-serif text-2xl font-black tracking-tighter">N7.</a>
+        <div class="flex gap-4">
+            <button class="text-primary"><span class="material-symbols-outlined">menu</span></button>
+        </div>
+    </header>
+
+    <!-- Global Marquee -->
+    <div
+        class="fixed top-0 lg:left-24 right-0 bg-primary h-12 flex items-center overflow-hidden z-[90] border-b-2 border-black">
+        <div
+            class="animate-marquee whitespace-nowrap flex items-center text-black font-display font-black text-[10px] tracking-[0.5em] py-2">
+            <span class="mx-8">PRODUCT_REGISTRY // THE_SERENE // v.2024.01</span>
+            <span class="mx-8">PRODUCT_REGISTRY // THE_SERENE // v.2024.01</span>
+            <span class="mx-8">PRODUCT_REGISTRY // THE_SERENE // v.2024.01</span>
+            <span class="mx-8">PRODUCT_REGISTRY // THE_SERENE // v.2024.01</span>
+            <span class="mx-8">PRODUCT_REGISTRY // THE_SERENE // v.2024.01</span>
+            <span class="mx-8">PRODUCT_REGISTRY // THE_SERENE // v.2024.01</span>
+        </div>
+    </div>
+
+    <a aria-label="Chat on WhatsApp"
+        class="fixed bottom-6 right-6 z-50 flex items-center justify-center size-14 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#128C7E] hover:scale-110 transition-all duration-300"
+        href="#">
+        <span class="material-symbols-outlined text-[28px]">chat</span>
+    </a>
+    <main class="lg:ml-24 pt-12 min-h-screen">
+        <div class="px-6 lg:px-12 py-12">
+            <!-- Breadcrumbs -->
+            <div
+                class="flex items-center gap-4 mb-12 font-mono text-[10px] font-bold tracking-[0.4em] uppercase opacity-50">
+                <a href="index.html" class="hover:text-primary transition-colors">ROOT</a>
+                <span class="text-primary">//</span>
+                <a href="collections.html" class="hover:text-primary transition-colors">REGISTRY</a>
+                <span class="text-primary">//</span>
+                <span class="text-white">THE_SERENE</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <!-- Image Pipeline -->
+                <div class="lg:col-span-1 hidden lg:block h-full border-r-2 border-primary/20">
+                    <div
+                        class="[writing-mode:vertical-lr] font-mono text-[10px] font-bold tracking-[1em] text-primary/30 py-20 uppercase">
+                        VISUAL_DATA // STREAM</div>
+                </div>
+
+                <!-- Main Media -->
+                <div class="lg:col-span-6 space-y-12">
+                    <div
+                        class="group relative aspect-[4/5] border-4 border-white shadow-brutalist-white hover:shadow-none transition-all duration-500 overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQhqAER_e2LuAwC1ZC3FGG9Loiw6zY4VmsWdNUDqJWbdJlAEw8SFaMNRDc3YEebU27n_0RPsns6iYqar-W0zFytlCOCFq4mFLG4UTBPInk-vRTPluZx-NdLwTRUyYgfhlyqBvsNin-bto4dmHUWZ2zxEo1--fHuRNOTSwhYKulftMf53sgOmoXMYZ6A7lFZDsuFAonIWnpnXChJFZywyikSeJUafMp9Mt_4SYlEtC84U8kBDoDdEx2jTQviqjtfEFSn60DXEtE_uoW"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                        <div class="glitch-img-hover absolute inset-0 bg-primary mix-blend-overlay pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute top-8 left-8 bg-black border-2 border-primary p-4 shadow-brutalist font-mono text-[10px] font-black uppercase tracking-tighter">
+                            CAM_ENTRY_001</div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-8">
+                        <div
+                            class="group relative aspect-[3/4] border-2 border-accent shadow-brutalist-accent hover:shadow-none transition-all overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU1yP5rD2BvsIphf0MOOsH-xMm0l2bjQQJk9Us0PZ7O5tf1_GeSVS2-9YMDj1zXycxXwEdBVLDaSvYpjAzisy5MALb95mZafhErh5nk47x2xoIPLuLbA-K7ntkHC2nL1_pmdVqor3qw5GtisY-nI4jPV7RfUV8TPhndNOjXotC9nmoiHSWRJstxj4XC6r_FUCcpVHFrjLZTNJRz7zy7l-jkcjgQmsGPWzdkq3ZF5c557bMKKggNtK7EdhLY_lQN4NyMPOld_0VPMFi"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                            <div class="absolute bottom-4 left-4 font-mono text-[8px] opacity-50">DETAIL_ZOOM_02</div>
+                        </div>
+                        <div
+                            class="group relative aspect-[3/4] border-2 border-primary shadow-brutalist hover:shadow-none transition-all overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSK26FFk4lTQinK3qN1zV4V7ehBLZjfNmkE-0Jw7S4Na4T1gzvmiSgTGctgSiM5-Yn3YT41K_En2LnWBYoQf4KvYI9fIsZt2Bgaf_7lGSRKvY7aKR3jHodkGsdAT4mBzUyXsqj3lmWrfBpXg7W76cwIPlQVSS-TD1K0t--ff6SUEdkB3lJ-BcZZNij0paqH-Vjf3GhWLL-nkDef_ShqQDdLWcINUMB3aLttUlPeoAaYYqjYtqKtus2LIfR1Z-ECHlw3VmFIpyzF-kP"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                            <div class="absolute bottom-4 left-4 font-mono text-[8px] opacity-50">FLOW_ANALYSIS_03</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product HUD -->
+                <div class="lg:col-span-5 lg:sticky lg:top-32 space-y-12">
+                    <div class="space-y-4">
+                        <h2
+                            class="font-display text-xs font-black tracking-[0.4em] text-primary group flex items-center gap-2">
+                            <span class="w-8 h-[1px] bg-primary"></span> ENTITY_DEFINITION // 0042
+                        </h2>
+                        <h1 class="font-serif text-6xl font-black uppercase tracking-tighter italic leading-none">
+                            The_Serene.</h1>
+                        <p class="font-mono text-xs opacity-50 uppercase tracking-[0.2em] leading-relaxed max-w-sm">
+                            Modern restraint deconstructed for the urban muse. Deep midnight palette optimized for
+                            tropical atmospheric conditions.</p>
+                    </div>
+
+                    <div
+                        class="bg-[#0A0A0A] border-4 border-primary p-12 shadow-brutalist relative overflow-hidden group">
+                        <div
+                            class="absolute top-0 right-0 p-4 font-mono text-[8px] opacity-20 tracking-[0.5em] [writing-mode:vertical-lr]">
+                            PRICE_METRIC_v2</div>
+                        <div class="space-y-10 relative z-10">
+                            <div class="flex items-baseline gap-4">
+                                <span class="font-serif text-5xl font-black italic tracking-tighter">LKR 12,500</span>
+                                <span class="font-mono text-xs opacity-30 line-through tracking-tighter">LKR
+                                    14,000</span>
+                            </div>
+
+                            <div class="space-y-6">
+                                <div class="flex justify-between items-center">
+                                    <span
+                                        class="font-mono text-[10px] font-bold tracking-[0.3em] uppercase opacity-60">SELECT_SIZE</span>
+                                    <a href="#"
+                                        class="font-mono text-[9px] font-bold text-accent hover:underline uppercase tracking-tighter flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-sm">straighten</span> SIZE_PROTOCOLS
+                                    </a>
+                                </div>
+                                <div class="flex flex-wrap gap-4">
+                                    <button
+                                        class="w-14 h-14 border-2 border-white/20 hover:border-primary hover:text-primary hover:bg-primary/10 transition-all font-mono text-xs font-bold flex items-center justify-center">XS</button>
+                                    <button
+                                        class="w-14 h-14 border-2 border-primary bg-primary text-black font-mono text-xs font-bold flex items-center justify-center shadow-brutalist-sm">S</button>
+                                    <button
+                                        class="w-14 h-14 border-2 border-white/20 hover:border-primary hover:text-primary hover:bg-primary/10 transition-all font-mono text-xs font-bold flex items-center justify-center">M</button>
+                                    <button
+                                        class="w-14 h-14 border-2 border-white/20 hover:border-primary hover:text-primary hover:bg-primary/10 transition-all font-mono text-xs font-bold flex items-center justify-center">L</button>
+                                    <button
+                                        class="w-14 h-14 border-2 border-white/20 hover:border-primary hover:text-primary hover:bg-primary/10 transition-all font-mono text-xs font-bold flex items-center justify-center">XL</button>
+                                </div>
+                            </div>
+
+                            <button
+                                class="group relative w-full bg-primary text-black py-6 border-2 border-black font-display font-black text-xs uppercase tracking-[0.4em] overflow-hidden overflow-hidden shadow-brutalist active:shadow-none translate-y-[-4px] active:translate-y-0 transition-all">
+                                <span class="relative z-10">INITIALIZE_ACQUISITION.</span>
+                                <div
+                                    class="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-300">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Accordions -->
+                    <div class="space-y-4">
+                        <details
+                            class="group border-2 border-white/10 hover:border-primary transition-colors bg-white/5">
+                            <summary
+                                class="list-none p-6 flex justify-between items-center cursor-pointer font-mono text-[10px] font-bold uppercase tracking-[0.3em]">
+                                <span class="flex items-center gap-4 text-primary"><span
+                                        class="w-2 h-2 bg-primary"></span> DESIGN_INTELLIGENCE</span>
+                                <span
+                                    class="material-symbols-outlined group-open:rotate-180 transition-transform text-primary">expand_more</span>
+                            </summary>
+                            <div
+                                class="p-8 pt-0 font-mono text-[9px] leading-relaxed opacity-60 uppercase tracking-widest">
+                                CRAFTED FROM BREATHABLE COMPOSITE CREPE. ENGINEERED FOR HIGH HUMIDITY ENVIRONMENTS.
+                                REINFORCED STITCHING AT ALL STRESS POINTS. FLUID SILHOUETTE PROTOCOL OPTIMIZED FOR
+                                MOTION.
+                            </div>
+                        </details>
+                        <details
+                            class="group border-2 border-white/10 hover:border-accent transition-colors bg-white/5">
+                            <summary
+                                class="list-none p-6 flex justify-between items-center cursor-pointer font-mono text-[10px] font-bold uppercase tracking-[0.3em]">
+                                <span class="flex items-center gap-4 text-accent"><span
+                                        class="w-2 h-2 bg-accent"></span> CARE_PROTOCOL</span>
+                                <span
+                                    class="material-symbols-outlined group-open:rotate-180 transition-transform text-accent">expand_more</span>
+                            </summary>
+                            <div
+                                class="p-8 pt-0 font-mono text-[9px] leading-relaxed opacity-60 uppercase tracking-widest">
+                                COLD_WASH_SEQUENCE_ONLY. DO NOT USE OXIDIZING AGENTS. STEAM_VALIDATION RECOMMENDED.
+                                DRY_FLAT TO MAINTAIN STRUCTURAL INTEGRITY. NO_TUMBLE_DRY.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Separator -->
+        <div class="h-[2px] bg-primary/20 w-full my-32"></div>
+
+        <section class="py-32 border-t-2 border-primary/10 overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-1/4 h-full bg-primary/5 -skew-x-12 transform origin-top-right"></div>
+            <div class="px-6 lg:px-12 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div class="space-y-10">
+                        <div class="space-y-4">
+                            <span
+                                class="font-mono text-[10px] font-black tracking-[0.4em] text-accent uppercase">PROCESS_LOG
+                                // BEHIND_THE_SEAMS</span>
+                            <h2 class="font-serif text-5xl font-black italic tracking-tighter uppercase leading-none">
+                                The_Design_Journey.</h2>
+                        </div>
+                        <div class="w-32 h-2 bg-primary"></div>
+                        <div
+                            class="space-y-6 font-mono text-xs opacity-60 leading-relaxed uppercase tracking-widest max-w-xl">
+                            <p>Inspired by the architectural geometry of Galle Fort, The_Serene was engineered to
+                                harmonize fluid motion with structural stillness. We sourced specialized composite crepe
+                                to optimize thermal regulation in tropical climates.</p>
+                            <p>Protocol: Every stitch is placed with mathematical precision, creating a silhouette that
+                                is both protective and powerfully modern.</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="pt-12">
+                                <div class="border-2 border-white shadow-brutalist-white p-2">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2sgjj4qDXdaQ15HmXGJCedpFjiRncQSG15z-MomgTZv2bgaTwqyTxMpqtjg9xuQrTNB9CkorRK1Dw2I_gm19Lt3FYd0fPqnPZE-Gj4v4LLGwmklroamkiS31YIGdhTxDAWSbw4y9CBK7uxODGgkAXq06pgE8QwtwTRPgY5UTcISZOpDeOYPNf4IXifJwNykM6oWL6TfR6zTmFnj0gEkADbsS8uevmD5Auu4Oi0x5qaa50IXzbswrbNF0ATiDh6Fe9K8QiC8zxFb_Z"
+                                        class="w-full grayscale hover:grayscale-0 transition-all duration-500" />
+                                </div>
+                            </div>
+                            <div>
+                                <div class="border-2 border-primary shadow-brutalist p-2">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXw1cw_C2v19MpzT208W9FYPpLvz3vgisYDAghiFQf_glMT68jZfzz5FrZL7VAfcMtszi_w3Q66UB1jvliFyLJowz4nYXQN7HDtqqt_sKo6SpBIu48V05Jzse9dC202SfCQMFgYVqUOR4kbAh1DHy7XEaeTI06iLkh1Jj_Tx_Ddc0tTEug3pYAazlM63-UYnnaGIqqzYjGdgysd08VfuUxm4MPVTOCmkJVlzvkiFnvGxx_vt7pwuVTaIJhojA0C8EHIJBaBiL8qpxu"
+                                        class="w-full grayscale hover:grayscale-0 transition-all duration-500" />
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -bottom-8 -left-8 bg-black border-2 border-accent p-6 shadow-brutalist-accent max-w-[240px]">
+                            <p class="font-serif italic text-sm text-white">"ENGINEERED AS ARMOR, EXPERIENCED AS SECOND
+                                SKIN."</p>
+                            <p class="font-mono text-[8px] opacity-40 mt-4 tracking-widest">// LEAD_DESIGNER_MANIFESTO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 border-t-2 border-primary/10">
+            <div class="px-6 lg:px-12">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div class="space-y-4">
+                        <span
+                            class="font-mono text-[10px] font-black tracking-[0.4em] text-primary uppercase">SYSTEM_RECOMMENDATION
+                            // ACCESS_DNA</span>
+                        <h2 class="font-serif text-5xl font-black italic tracking-tighter uppercase leading-none">
+                            Complete_The_Look.</h2>
+                    </div>
+                    <div class="flex gap-4">
+                        <button
+                            class="w-12 h-12 border-2 border-white/20 flex items-center justify-center hover:border-primary hover:text-primary transition-all group">
+                            <span class="material-symbols-outlined font-black">arrow_back</span>
+                        </button>
+                        <button
+                            class="w-12 h-12 border-2 border-primary flex items-center justify-center bg-primary text-black shadow-brutalist hover:shadow-none transition-all">
+                            <span class="material-symbols-outlined font-black">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card -->
+                    <div class="group h-full flex flex-col">
+                        <div
+                            class="relative aspect-[3/4] border-2 border-white/10 p-2 group-hover:border-primary transition-colors overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Yc_4K5W-0Foud60SnJ_hszP8YfcAsm1iqIJfG4eKicRDBXR9oP8jVLArWRKXJ9g_fRd0oBxem-OwTKWp7OHJ3Q2NLWWq7ZFqL-1btbmtrhhTpvGB83yW6pRU7chHFZcojUNHojaYgjcPD5z1bbF_tfAUGS_zWMni-w-oB7457Prn5gC5pQYCY7zx95cfiPlX9KgffoV2SIYmPP8lp_fOY17lErCDo7J3pXr2FL2R7eHyNzXhRx4pw3aoeGas0XnK-K7Ppdl1rEfj"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                            <div
+                                class="absolute bottom-4 right-4 translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
+                                <button
+                                    class="bg-primary text-black p-4 border-2 border-black shadow-brutalist hover:shadow-none transition-all">
+                                    <span class="material-symbols-outlined font-black">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-6 space-y-2">
+                            <h3 class="font-mono text-[10px] font-black tracking-widest uppercase">MIST_CHIFFON_HIJAB
+                            </h3>
+                            <p class="font-serif text-lg font-black italic">LKR 2,500</p>
+                        </div>
+                    </div>
+                    <!-- Repeat for other items if needed or just one for demo -->
+                    <div class="group h-full flex flex-col">
+                        <div
+                            class="relative aspect-[3/4] border-2 border-white/10 p-2 group-hover:border-accent transition-colors overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA48S_c2E6iQu8zMtajs9_2CUaWjRptchJRjWAxOxKhv9XjqwqT62cDFS-rQjUkup38nyMcK6oXWe1Jwp5k01ZYttLHnAD6CGMJ3oFLByg1jak3nLEX2VPD9Y4G6H8RWCp7hf0j7pXjBi14_GlXuznemM8tjCv8aKzmAMe7-awAm7Zsj-Ot4nbCtcdf2tsXAa6sAO60k_KYkvDFEOaMWnuni3OBNIFS3lRV30-TZOa4IAJfxgUmTxTfwc67tfrK_wzIXyY8aj-wBWY7"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                            <div
+                                class="absolute bottom-4 right-4 translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
+                                <button
+                                    class="bg-accent text-black p-4 border-2 border-black shadow-brutalist-accent hover:shadow-none transition-all">
+                                    <span class="material-symbols-outlined font-black">add_shopping_cart</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-6 space-y-2">
+                            <h3 class="font-mono text-[10px] font-black tracking-widest uppercase">LUNAR_SILVER_CUFF
+                            </h3>
+                            <p class="font-serif text-lg font-black italic">LKR 4,200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 border-t-2 border-primary/10 bg-white/5">
+            <div class="px-6 lg:px-12">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div class="space-y-4">
+                        <span
+                            class="font-mono text-[10px] font-black tracking-[0.4em] text-accent uppercase">COMMUNITY_STREAM
+                            // DATA_REPOST</span>
+                        <h2 class="font-serif text-5xl font-black italic tracking-tighter uppercase leading-none">
+                            Styled_By_Sisterhood.</h2>
+                    </div>
+                    <a href="#"
+                        class="font-mono text-[10px] font-black p-4 border-2 border-primary text-primary hover:bg-primary hover:text-black transition-all uppercase tracking-widest">VIEW_FULL_STREAM</a>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div
+                        class="group relative aspect-square border-2 border-white/20 p-2 overflow-hidden hover:border-primary transition-colors">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyVjfvfb-eWPFHTWUGTKug2o-46uJ-cXYz_of26h7LWhY06O6RlNwLOk7KFbZ0uRNkhEEloLlwZGEQEbwt75TOa6W8hGhDkpL9smtzKGrTddVkYO9PLVN9MZsdWdCx6s8RK7EolbZRDA-o9Z_nwVLMNS2tW_VMArrF3vy1YfQh5YVo8XnEpc61-1jcbiveMimlj9pTIWKb6OtDTcHEcMXZDf2E8NK_HcRqqMx6dKa7K-Q-wgM-5LMbqB7TcCFZjeLSFxQaORbyr7SI"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-4xl text-black font-black">favorite</span>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative aspect-square border-2 border-white/20 p-2 overflow-hidden hover:border-primary transition-colors">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8uYDinlK3CmM1Xz90fW-cFjXi8NZw5NjBYe1ZXki4yaiu8I3ABPQ2VXCBUEaCt0LxCYKkAZd5wMSEbXWkWtt5SRvMQkjnGfvf10sHZFAfgZZqo8ST_luNpYhKW9LWkUuM8vmAGIVXctxORn9avrb7EprfhglwbcbSVe4KE2XrvbJoTCu_a8rtHwl1LtDSiu9HUUnVYu0u5F9dy1hwijpEhTS1C_diGHd-4ORofsXKa37-Ox1gqs49FViuz301pVS_TGsIGZ5LOaQe"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                    </div>
+                    <div
+                        class="group relative aspect-square border-2 border-white/20 p-2 overflow-hidden hover:border-primary transition-colors">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN5qHFahPr9N5Q3WyIDhl2N1J7KJG8qsCGaLsw_GMA2WlCYl2SNMrKJF5JmxU_vlG8C1BTyAWNi4IWHZC5ZnssnSen1HOHG5aKHlPZvfKZNkPvn5Z5XQfwVL9sPOl0vYgdMXblBM_2axnp3nEQRuFFtTGoDWt32eVp8GwH020rqwncDxQnudoBxboD3h24aPIckM0BGL4eo9Wf1tSR4brb9RYLLX7N6rFl8j6HKgpscSwFg5mUiMMt4DK8BO4S8JdOCmk7vbhPvypw"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                    </div>
+                    <div
+                        class="group relative aspect-square border-2 border-white/20 p-2 overflow-hidden hover:border-primary transition-colors">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF-X417fwMGYaIBwiN8J2MlB451Kr02_Fke5r1HdMqfBiZIsZswtlWDAOk7-HeOvmRYEHvX73okqPSexHn4RveMiELm70gB60uaZrjmvE-SEZyPwdw1yOul7ZbmXrfRDA-v1VgD4GUA85VHe_gOqE742eJyHFfydi-TcGDHUEULEDy9v929N3rswjrYrwlx5bwpkeFniR1UvDulWHeU-DQCHQ1Ws8pffgErVYjZ2lpEfNkyeDNwI75baNJLEhSQ4x8TFxsuRwfPCXP"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-24 border-t-4 border-black bg-white pt-20 pb-10 text-black">
+        <div class="mx-auto max-w-[1600px] px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div class="space-y-8">
+                    <div class="inline-block border-2 border-black p-4 bg-primary shadow-brutalist">
+                        <a class="block text-4xl font-serif font-black italic tracking-tighter text-black"
+                            href="index.html">N7.</a>
+                    </div>
+                    <p class="font-mono text-[10px] leading-relaxed text-black/60 max-w-xs uppercase tracking-widest">
+                        DNA_ENTRY_v2.0 // Modest fashion deconstructed. Designed in Colombo, Sri Lanka. Standardized for
+                        the cosmopolitan woman.
+                    </p>
+                    <div class="flex gap-4 pt-4 border-t-2 border-black/10">
+                        <a class="w-10 h-10 flex items-center justify-center border-2 border-black hover:bg-primary transition-all shadow-brutalist-sm hover:shadow-none bg-white"
+                            href="#"><i class="fa-brands fa-instagram text-black"></i></a>
+                        <a class="w-10 h-10 flex items-center justify-center border-2 border-black hover:bg-primary transition-all shadow-brutalist-sm hover:shadow-none bg-white"
+                            href="#"><i class="fa-brands fa-facebook text-black"></i></a>
+                        <a class="w-10 h-10 flex items-center justify-center border-2 border-black hover:bg-primary transition-all shadow-brutalist-sm hover:shadow-none bg-white"
+                            href="#"><i class="fa-brands fa-tiktok text-black"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="mb-10 font-display text-[10px] font-black uppercase tracking-[0.4em] text-black">Registry
+                        // Category</h4>
+                    <ul class="space-y-4 font-mono text-[10px] font-bold text-black/60 uppercase tracking-widest">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="w-1.5 h-1.5 bg-primary"></span> New_Arrivals</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="w-1.5 h-1.5 bg-black/20"></span> Abayas_Core</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="w-1.5 h-1.5 bg-black/20"></span> Co_Ords</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="w-1.5 h-1.5 bg-black/20"></span> Access_DNA</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="mb-10 font-display text-[10px] font-black uppercase tracking-[0.4em] text-black">System
+                        // Support</h4>
+                    <ul class="space-y-4 font-mono text-[10px] font-bold text-black/60 uppercase tracking-widest">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="w-1.5 h-1.5 bg-black/20"></span> Contact_HQ</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="w-1.5 h-1.5 bg-black/20"></span> Logistics_Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="w-1.5 h-1.5 bg-black/20"></span> Return_Protocol</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="w-1.5 h-1.5 bg-black/20"></span> Size_Metrics</a></li>
+                    </ul>
+                </div>
+                <div class="bg-primary/5 p-8 border-2 border-black border-dashed">
+                    <h4 class="mb-6 font-display text-[10px] font-black uppercase tracking-[0.4em] text-black">Update //
+                        Stream</h4>
+                    <p class="font-mono text-[10px] text-black/50 mb-6 uppercase tracking-widest leading-relaxed">Join
+                        the synchronization list for early access to core drops.</p>
+                    <form class="space-y-4 font-mono">
+                        <input
+                            class="w-full bg-white border-2 border-black p-3 text-[10px] text-black placeholder:text-black/30 focus:outline-none shadow-brutalist-sm"
+                            placeholder="ENTER_EMAIL" type="email" />
+                        <button
+                            class="w-full bg-black text-primary p-3 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-primary hover:text-black transition-all">Sychronize_Now</button>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="flex flex-col items-center justify-between border-t-2 border-black pt-12 md:flex-row gap-6 font-mono text-[9px] font-bold uppercase tracking-[0.3em] text-black/40">
+                <p>© 2024 N7_LK // ALL_RIGHTS_RESERVED.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-black">Privacy_Protocol</a>
+                    <a href="#" class="hover:text-black">Terms_Of_Service</a>
+                    <a href="#" class="hover:text-black">Security_Manifesto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
