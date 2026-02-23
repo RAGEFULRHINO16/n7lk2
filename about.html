@@ -1,11 +1,11 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>N7 LK - Premium Muslim-Wear</title>
+    <title>N7 LK | DNA_MANIFESTO - Posh Brutalist</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;900&family=Cinzel:wght@400;900&family=Space+Grotesk:wght@300;700&family=Syncopate:wght@400;700&family=Manrope:wght@200;800&family=Space+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&family=Cinzel:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
@@ -16,372 +16,270 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#CAFF33", // Cyber Neon Yellow
-                        "accent": "#00E0FF", // Electric Blue
-                        "background-dark": "#050505",
-                        "surface-dark": "#0A0A0A",
-                        "dim": "#333333",
-                        "text-main": "#FFFFFF",
+                        "primary": "#000000",
+                        "accent": "#F5E6CA", // Neon Beige
+                        "background-light": "#F2F2F2",
+                        "text-main": "#000000",
                     },
                     fontFamily: {
                         "sans": ["Archivo", "sans-serif"],
                         "serif": ["Cinzel", "serif"],
-                        "mono": ["Space Mono", "monospace"],
-                        "display": ["Syncopate", "sans-serif"],
+                        "mono": ["Space Grotesk", "monospace"],
                     },
                     boxShadow: {
-                        'brutalist': '8px 8px 0px 0px #CAFF33',
-                        'brutalist-accent': '8px 8px 0px 0px #00E0FF',
-                        'brutalist-white': '8px 8px 0px 0px #FFFFFF',
+                        'brutalist': '8px 8px 0px 0px #000000',
+                        'brutalist-accent': '8px 8px 0px 0px #F5E6CA',
+                        'brutalist-sm': '4px 4px 0px 0px #000000',
                     },
                     animation: {
-                        'marquee': 'marquee 20s linear infinite',
-                        'glitch': 'glitch 0.3s infinite linear alternate-reverse',
+                        'marquee': 'marquee 30s linear infinite',
                     },
                     keyframes: {
                         marquee: {
                             '0%': { transform: 'translateX(0%)' },
                             '100%': { transform: 'translateX(-100%)' },
-                        },
-                        glitch: {
-                            '0%': { clipPath: 'inset(10% 0 80% 0)', transform: 'translate(-2px, 1px)' },
-                            '100%': { clipPath: 'inset(60% 0 30% 0)', transform: 'translate(2px, -1px)' },
                         }
                     }
                 },
             },
         }
     </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
+    <style type="text/tailwindcss">
+        body {
+            background-color: #F2F2F2;
+            background-image: linear-gradient(#d4d4d4 1px, transparent 1px), linear-gradient(90deg, #d4d4d4 1px, transparent 1px);
+            background-size: 40px 40px;
         }
-
-        .glitch-container:hover .glitch-img {
-            animation: glitch 0.3s infinite linear alternate-reverse;
+        .outline-text {
+            -webkit-text-stroke: 1.5px #000; 
+            color: transparent;
         }
-
-        .glitch-img-hover {
-            opacity: 0;
-            transition: opacity 0.1s steps(2, end);
+        .vertical-nav {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
         }
-
-        .group:hover .glitch-img-hover {
-            opacity: 1;
-            animation: glitch 0.3s infinite linear alternate-reverse;
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap');
     </style>
 </head>
 
 <body
-    class="bg-background-dark text-white min-h-screen font-sans selection:bg-primary selection:text-black overflow-x-hidden">
+    class="bg-background-light text-text-main font-sans antialiased overflow-x-hidden selection:bg-black selection:text-accent">
     <!-- Desktop Vertical Nav -->
     <nav
-        class="fixed left-0 top-0 h-full w-24 bg-black border-r-2 border-primary z-[100] hidden lg:flex flex-col items-center py-12 gap-16">
-        <a href="index.html"
-            class="font-serif text-3xl font-black -rotate-90 tracking-tighter hover:text-primary transition-colors">N7.</a>
-        <div class="flex-grow flex flex-col justify-center gap-12 -rotate-90 overflow-visible w-24">
-            <a href="collections.html"
-                class="font-display text-[10px] font-bold tracking-[0.4em] hover:text-primary transition-all flex items-center gap-4">
-                <span class="w-2 h-2 bg-primary"></span> REGISTRY.
-            </a>
-            <a href="about.html"
-                class="font-display text-[10px] font-bold tracking-[0.4em] text-primary transition-all flex items-center gap-4">
-                MANIFESTO.
-            </a>
+        class="fixed left-0 top-0 bottom-0 w-16 md:w-20 bg-white border-r-2 border-black z-50 flex flex-col justify-between items-center py-8 hidden lg:flex">
+        <a class="font-serif text-2xl font-black tracking-tighter transform -rotate-90 origin-center"
+            href="index.html">N7.</a>
+        <div class="flex flex-col gap-12 items-center flex-grow justify-center">
+            <div class="vertical-nav gap-8 flex">
+                <a class="text-xs font-bold uppercase tracking-[0.2em] hover:text-gray-500 transition-colors rotate-180"
+                    href="collections.html">Collections</a>
+                <a class="text-xs font-bold uppercase tracking-[0.2em] hover:text-gray-500 transition-colors rotate-180 text-black border-l-2 border-black pl-2"
+                    href="about.html">About</a>
+                <a class="text-xs font-bold uppercase tracking-[0.2em] hover:text-gray-500 transition-colors rotate-180"
+                    href="index.html">Home</a>
+            </div>
         </div>
-        <button
-            class="bg-primary text-black p-4 border-2 border-black shadow-brutalist hover:shadow-none translate-x-1 transition-all">
-            <span class="material-symbols-outlined font-black">shopping_bag</span>
-        </button>
+        <a class="group relative w-full aspect-square flex items-center justify-center bg-black text-white hover:bg-accent hover:text-black transition-colors border-y-2 border-black"
+            href="collections.html">
+            <span class="vertical-nav text-sm font-bold tracking-widest rotate-180 text-accent">SHOP</span>
+        </a>
     </nav>
 
     <!-- Mobile Header -->
     <header
-        class="lg:hidden fixed top-0 w-full bg-black border-b-2 border-primary z-[100] px-6 py-4 flex justify-between items-center">
-        <a href="index.html" class="font-serif text-2xl font-black tracking-tighter">N7.</a>
-        <div class="flex gap-4">
-            <button class="text-primary"><span class="material-symbols-outlined">menu</span></button>
-        </div>
+        class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b-2 border-black lg:hidden px-4 h-16 flex items-center justify-between">
+        <a class="font-serif text-2xl font-black tracking-tighter" href="index.html">N7 LK.</a>
+        <button
+            class="p-2 border-2 border-black bg-accent shadow-brutalist-sm active:translate-y-1 active:shadow-none transition-all">
+            <span class="material-symbols-outlined font-bold text-black">menu</span>
+        </button>
     </header>
 
-    <!-- Global Marquee -->
-    <div
-        class="fixed top-0 lg:left-24 right-0 bg-primary h-12 flex items-center overflow-hidden z-[90] border-b-2 border-black">
-        <div
-            class="animate-marquee whitespace-nowrap flex items-center text-black font-display font-black text-[10px] tracking-[0.5em] py-2">
-            <span class="mx-8">DNA_MANIFESTO // v.2024.01</span>
-            <span class="mx-8">DNA_MANIFESTO // v.2024.01</span>
-            <span class="mx-8">DNA_MANIFESTO // v.2024.01</span>
-            <span class="mx-8">DNA_MANIFESTO // v.2024.01</span>
-            <span class="mx-8">DNA_MANIFESTO // v.2024.01</span>
-            <span class="mx-8">DNA_MANIFESTO // v.2024.01</span>
-        </div>
-    </div>
-
-    <div class="lg:ml-24 pt-12">
-
-        <main class="flex-grow">
-            <!-- HERO // THE_ARCHITECT -->
-            <section class="relative bg-black border-b-2 border-primary py-32 overflow-hidden px-6 lg:px-12">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                    <div class="lg:col-span-1 hidden lg:block h-full border-r-2 border-primary/20">
-                        <div class="vertical-text font-mono text-[10px] font-bold tracking-[1em] text-primary/30 py-20">
-                            CORE_DNA // MANIFESTO</div>
-                    </div>
-                    <div class="lg:col-span-6 space-y-12">
-                        <div class="inline-block border-2 border-primary p-4 shadow-brutalist mb-8">
-                            <h1
-                                class="font-serif text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none italic">
-                                Modern<br />Restraint.</h1>
-                        </div>
-                        <div class="space-y-6 max-w-xl">
-                            <h2 class="font-display text-xs font-black tracking-[0.4em] text-primary">SYSTEM_ENTRY_001
-                                //
-                                v.FOUNDATION</h2>
-                            <p class="font-mono text-sm leading-relaxed opacity-80">
-                                FOUNDED_2023 // COLOMBO_LK. N7 LK EMERGED FROM A DESIRE TO REDEFINE THE NARRATIVE OF
-                                MODEST FASHION. WE CHOSE BOLD LINES, ARCHITECTURAL SILHOUETTES, AND PREMIUM FABRICS THAT
-                                SPEAK TO THE COSMOPOLITAN WOMAN.
-                            </p>
-                            <div
-                                class="p-8 border-2 border-accent bg-black shadow-brutalist-accent font-serif text-2xl font-black italic">
-                                "Fashion isn't just about covering up. It's about revealing your confidence through the
-                                elegance of restraint."
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-5 relative group">
+    <main class="lg:pl-20">
+        <!-- Hero Section -->
+        <section class="relative py-24 px-6 md:px-12 lg:py-32 border-b-2 border-black overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+                <h2 class="text-[40vw] font-black outline-text leading-none uppercase rotate-90 origin-top-right">DNA
+                </h2>
+            </div>
+            <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10">
+                <div class="lg:col-span-1 hidden lg:block border-r-2 border-black/10">
+                    <div
+                        class="vertical-nav font-mono text-[10px] font-bold tracking-[1em] text-gray-400 py-20 uppercase">
+                        Core_System // Manifesto</div>
+                </div>
+                <div class="lg:col-span-6 flex flex-col justify-center">
+                    <span
+                        class="bg-black text-white px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest mb-8 inline-block w-fit">ENTRY_001
+                        // THE_FOUNDATION</span>
+                    <h1
+                        class="font-serif text-6xl md:text-9xl font-bold uppercase leading-[0.85] tracking-tighter mb-12">
+                        Raw.<br />
+                        <span class="italic outline-text">Restraint.</span><br />
+                        Refined.
+                    </h1>
+                    <div class="space-y-8 max-w-xl">
+                        <p class="font-mono text-lg leading-tight uppercase font-medium">
+                            N7 LK emerged from the vibrant architecture of Colombo, born of a desire to deconstruct the
+                            traditional narrative of modest fashion.
+                        </p>
                         <div
-                            class="aspect-[3/4] border-4 border-white overflow-hidden relative shadow-brutalist-white group-hover:shadow-none transition-all duration-500">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBW_F22el_3LkP5OYhJMiLh9tTXfpF5aHA5W5nIl-k7BEijQUDAjH_vm84GJJkf70CnvhMZ7KjXxmmDzejF8-tyavXd9Ffyn5RhKgsi36GcJSlQRhlb5KbC-pvEmgcI1HSNXQPNZnjHZ_ZLP0YgPLMcO09bZFWL4q4ilUP0AlYRw9bleOwRk8k0mAhiyChFDvDTKjH9UbZxsZGneTIXQXUB0QGOAg71gYf9qazBVHp3lhk59LACWip0lwzipeDKaRadXSlBtWmvFWc"
-                                class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0" />
-                            <div
-                                class="glitch-img-hover absolute inset-0 bg-primary mix-blend-overlay pointer-events-none">
-                            </div>
-                            <div
-                                class="absolute bottom-12 left-12 bg-black border-2 border-primary p-6 shadow-brutalist">
-                                <span
-                                    class="font-mono text-[10px] block mb-2 font-bold tracking-widest text-primary">CREATIVE_DIRECTOR</span>
-                                <span class="font-serif text-3xl font-black italic">N. Seven</span>
-                            </div>
+                            class="p-8 border-2 border-black bg-accent shadow-brutalist font-serif text-2xl font-bold italic">
+                            "Modesty isn't about disappearing. It's about commanding attention through the architecture
+                            of silence."
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="lg:col-span-5">
+                    <div
+                        class="aspect-[3/4] border-2 border-black p-2 bg-white shadow-brutalist group relative overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBW_F22el_3LkP5OYhJMiLh9tTXfpF5aHA5W5nIl-k7BEijQUDAjH_vm84GJJkf70CnvhMZ7KjXxmmDzejF8-tyavXd9Ffyn5RhKgsi36GcJSlQRhlb5KbC-pvEmgcI1HSNXQPNZnjHZ_ZLP0YgPLMcO09bZFWL4q4ilUP0AlYRw9bleOwRk8k0mAhiyChFDvDTKjH9UbZxsZGneTIXQXUB0QGOAg71gYf9qazBVHp3lhk59LACWip0lwzipeDKaRadXSlBtWmvFWc"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+                        <div
+                            class="absolute bottom-8 left-8 bg-black text-white p-6 border-2 border-black shadow-[4px_4px_0px_#F5E6CA]">
+                            <span
+                                class="font-mono text-[10px] block mb-2 uppercase tracking-widest opacity-60">FOUNDING_ENTITY</span>
+                            <span class="font-serif text-3xl font-black italic uppercase">N. Seven</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <!-- SYSTEM // PIPELINE -->
-            <section class="bg-black py-32 px-6 lg:px-12 border-b-2 border-primary">
-                <div class="mb-20">
-                    <h3 class="font-display text-sm font-black tracking-[0.6em] text-primary mb-4 uppercase">
-                        System_Protocol // Pipeline</h3>
-                    <h2 class="font-serif text-6xl font-black uppercase tracking-tighter">Sketch_To_Life.</h2>
+        <!-- Process Section -->
+        <section class="py-24 px-6 md:px-12 border-b-2 border-black bg-white">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="mb-16">
+                    <h2 class="font-serif text-5xl md:text-7xl font-bold uppercase tracking-tighter italic">The_Process.
+                    </h2>
+                    <p class="font-mono text-xs text-gray-400 mt-4 uppercase tracking-[0.4em]">From Studio To Registry
+                    </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div
-                        class="group p-8 border-2 border-primary hover:bg-primary hover:text-black transition-all shadow-brutalist hover:shadow-none">
-                        <span class="font-mono text-4xl font-bold mb-8 block">01_</span>
-                        <h4 class="font-serif text-2xl font-black mb-4 italic">Conceptualization</h4>
-                        <p class="font-mono text-xs leading-relaxed opacity-70 group-hover:opacity-100">Hand-sketched
-                            designs inspired by Colombo's architecture, focusing on fluid lines and structured modesty.
-                        </p>
+                        class="p-10 border-2 border-black flex flex-col gap-6 hover:bg-accent transition-colors shadow-brutalist-sm group">
+                        <span
+                            class="font-mono text-4xl font-bold border-b-2 border-black pb-4 group-hover:border-white transition-colors">01.</span>
+                        <h3 class="font-serif text-2xl font-bold uppercase italic">Geometery</h3>
+                        <p class="font-mono text-xs uppercase leading-relaxed opacity-60">Architectural sketching
+                            inspired by the Brutalist monuments of Colombo.</p>
                     </div>
                     <div
-                        class="group p-8 border-2 border-accent hover:bg-accent hover:text-black transition-all shadow-brutalist-accent hover:shadow-none">
-                        <span class="font-mono text-4xl font-bold mb-8 block">02_</span>
-                        <h4 class="font-serif text-2xl font-black mb-4 italic">Fabric Selection</h4>
-                        <p class="font-mono text-xs leading-relaxed opacity-70 group-hover:opacity-100">Ethically
-                            sourcing breathable linens and premium silks suited for the tropical climate.</p>
+                        class="p-10 border-2 border-black flex flex-col gap-6 hover:bg-black hover:text-white transition-colors shadow-brutalist-sm group">
+                        <span
+                            class="font-mono text-4xl font-bold border-b-2 border-black pb-4 group-hover:border-zinc-800 transition-colors">02.</span>
+                        <h3 class="font-serif text-2xl font-bold uppercase italic">Tactility</h3>
+                        <p class="font-mono text-xs uppercase leading-relaxed opacity-60">Curating composite crepes and
+                            heavy linens that hold their structural integrity.</p>
                     </div>
                     <div
-                        class="group p-8 border-2 border-primary hover:bg-primary hover:text-black transition-all shadow-brutalist hover:shadow-none">
-                        <span class="font-mono text-4xl font-bold mb-8 block">03_</span>
-                        <h4 class="font-serif text-2xl font-black mb-4 italic">Precision Cut</h4>
-                        <p class="font-mono text-xs leading-relaxed opacity-70 group-hover:opacity-100">Master tailors
-                            cut
-                            each pattern with meticulous attention to drape and fit.</p>
+                        class="p-10 border-2 border-black flex flex-col gap-6 hover:bg-accent transition-colors shadow-brutalist-sm group">
+                        <span
+                            class="font-mono text-4xl font-bold border-b-2 border-black pb-4 group-hover:border-white transition-colors">03.</span>
+                        <h3 class="font-serif text-2xl font-bold uppercase italic">Precision</h3>
+                        <p class="font-mono text-xs uppercase leading-relaxed opacity-60">Standardized cutting protocols
+                            ensuring the perfect drape for every modest entity.</p>
                     </div>
                     <div
-                        class="group p-8 border-2 border-accent hover:bg-accent hover:text-black transition-all shadow-brutalist-accent hover:shadow-none">
-                        <span class="font-mono text-4xl font-bold mb-8 block">04_</span>
-                        <h4 class="font-serif text-2xl font-black mb-4 italic">Quality Finish</h4>
-                        <p class="font-mono text-xs leading-relaxed opacity-70 group-hover:opacity-100">Final
-                            inspections
-                            ensure every stitch meets the N7 standard before packaging.</p>
+                        class="p-10 border-2 border-black flex flex-col gap-6 hover:bg-black hover:text-white transition-colors shadow-brutalist-sm group">
+                        <span
+                            class="font-mono text-4xl font-bold border-b-2 border-black pb-4 group-hover:border-zinc-800 transition-colors">04.</span>
+                        <h3 class="font-serif text-2xl font-bold uppercase italic">Liaison</h3>
+                        <p class="font-mono text-xs uppercase leading-relaxed opacity-60">Direct-to-client distribution
+                            from our Colombo workshop to your doorstep.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- CONCIERGE // TERMINAL -->
-            <section class="bg-black py-32 px-6 lg:px-12 border-b-2 border-primary">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div class="space-y-8">
-                        <h3 class="font-display text-sm font-black tracking-[0.6em] text-primary uppercase">
-                            Direct_Access
-                            // Terminal</h3>
-                        <h2 class="font-serif text-6xl font-black uppercase tracking-tighter">Human_Link.</h2>
-                        <p class="font-mono text-sm leading-relaxed opacity-70 max-w-sm">
-                            SCAN_QR OR CLICK THE_CARD TO INITIALIZE A PERSONAL SHOPPING SESSION WITH OUR CONCIERGE TEAM.
-                        </p>
-                    </div>
-                    <div
-                        class="group relative bg-[#0A0A0A] border-4 border-primary p-12 shadow-brutalist hover:shadow-none transition-all cursor-pointer">
-                        <div class="absolute top-4 right-4 font-mono text-[10px] font-bold text-primary font-black">
-                            N7_CONCIERGE // v.1.0</div>
-                        <div class="space-y-12">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-serif text-4xl font-black italic">N7 LK Registry</h4>
-                                    <p class="font-mono text-xs text-primary mt-2">LINK_ACTIVE // ENCRYPTED</p>
-                                </div>
-                                <span class="material-symbols-outlined text-4xl text-primary">contactless</span>
-                            </div>
-                            <div class="space-y-4">
-                                <div class="font-mono text-2xl font-bold tracking-widest text-white">WA // +94 77 123
-                                    4567</div>
-                                <div class="font-mono text-xs opacity-50 uppercase tracking-[0.5em]">Available: 0900 -
-                                    2100 GMT+5:30</div>
-                            </div>
-                            <div class="flex justify-between items-end">
-                                <div class="font-mono text-[10px] opacity-40">SYSTEM_RELIABILITY_99.9%</div>
-                                <div class="w-20 h-20 bg-white p-2">
-                                    <span class="material-symbols-outlined text-6xl text-black">qr_code_2</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SISTERHOOD // GRID -->
-            <section class="bg-black py-32 px-6 lg:px-12 overflow-hidden">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                    <div class="space-y-4">
-                        <h2 class="font-display text-xs font-black tracking-[0.4em] text-primary">COMMUNITY_LINK //
-                            @N7.LK</h2>
-                        <h3 class="font-serif text-5xl font-black uppercase tracking-tighter">The_Sisterhood.</h3>
-                    </div>
+        <!-- Sisterhood Section -->
+        <section class="py-24 px-6 md:px-12 overflow-hidden relative">
+            <div class="max-w-[1400px] mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                    <h2 class="font-serif text-6xl md:text-8xl font-bold uppercase leading-tight tracking-tighter">
+                        The<br />
+                        Sisterhood.
+                    </h2>
                     <a href="#"
-                        class="font-mono text-xs font-black uppercase tracking-widest border-b-2 border-primary pb-2 hover:text-primary transition-colors">Join_The_Collective
+                        class="font-mono text-sm font-bold border-b-2 border-black mb-4 uppercase tracking-widest hover:text-accent transition-colors">Connect_Global
                         // IG</a>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <!-- Grid Item 01 -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                     <div
-                        class="group relative border-2 border-white aspect-square overflow-hidden shadow-brutalist-white hover:shadow-none transition-all">
+                        class="aspect-square border-2 border-black grayscale hover:grayscale-0 transition-all duration-500 overflow-hidden shadow-brutalist-sm rotate-2">
                         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSHvwKcSm93ZyQsTUugiBYRlbYwx2lel_O2pQ6U8kShljto6pI1bjtp5Zw_Afvy3_bK57D3AYL3LiQjeD3HlIbVYshpeqM97gxR3M6uc-Q07NRnzaTmb2MWNUopRzf_VEZzm4Q9RqNBHGJ8Emqdhk_Qb6YgxYNPLTT_rjVuYsNw0DnQPnxOZyGET-0j2gKGcaYR9pMYkAVJezParDwyUBv2oBQNnJE9hAihiAZKs5B_ySSKnfskDQM0ZjNNANke2BLMqXd3LiUcY_z"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                        <div class="glitch-img-hover absolute inset-0 bg-primary mix-blend-overlay pointer-events-none">
-                        </div>
+                            class="w-full h-full object-cover" />
                     </div>
-                    <!-- Grid Item 02 -->
                     <div
-                        class="group relative border-2 border-primary aspect-square overflow-hidden shadow-brutalist hover:shadow-none transition-all">
+                        class="aspect-square border-2 border-black grayscale hover:grayscale-0 transition-all duration-500 overflow-hidden shadow-brutalist-sm -rotate-3">
                         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpcp_ute0ZK_p4qx13svckbpl-9HxkmKpca62zvw1OlGNoFOaW-6NZnVsS2YySvEEOH0iCrw4kStkE0XZWrcklAbILFzJgvwtGSPEqG6C8OvaEHfYjRMv3C4IYOVojq1zXKyXjY4YjrmzkY9lc3GUzdyo3XgUQroJg4R3NCU4fFjs88t4Wlihs3OI4NeD7jiA8OSdo32N_Lx7AMr955xlbRK4iX3UrJT0emBLXUpxj0YDl77whgvEbosTuooECbnI9Bj0EROoq9Sxo"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                        <div class="glitch-img-hover absolute inset-0 bg-accent mix-blend-overlay pointer-events-none">
-                        </div>
+                            class="w-full h-full object-cover" />
                     </div>
-                    <!-- Grid Item 03 -->
                     <div
-                        class="group relative border-2 border-accent aspect-square overflow-hidden shadow-brutalist-accent hover:shadow-none transition-all">
+                        class="aspect-square border-2 border-black grayscale hover:grayscale-0 transition-all duration-500 overflow-hidden shadow-brutalist-sm rotate-1">
                         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcF-EV_nEaoAa15stKmlOew70POn_NeDZwp4qirAitkUa9Hso4OhvbgyhO8eN-nekncYakaDJkzc_RaTDHxCcu0qc-g5pXHNSjtnKJe4T2dDm2uh8mNs1zJ-RWIQVo_ITWBu4JYTAFjkyZ1EwS0qlBv67KFjF8hQ1BJk3HSHS1PSkgkYXYvG4ihUbIjXmkl9GUKVAgNXnQWRwiFsspDIF-1ymEYjp5RjJwNljP34qprQOd3V2brWR4MU_Y04JN-y__UC0RjMWfwlVH"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                        <div class="glitch-img-hover absolute inset-0 bg-primary mix-blend-overlay pointer-events-none">
-                        </div>
+                            class="w-full h-full object-cover" />
                     </div>
-                    <!-- Grid Item 04 -->
                     <div
-                        class="group relative border-2 border-white aspect-square overflow-hidden shadow-brutalist-white hover:shadow-none transition-all">
+                        class="aspect-square border-2 border-black grayscale hover:grayscale-0 transition-all duration-500 overflow-hidden shadow-brutalist-sm -rotate-1">
                         <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuApHV_3ax1IcIJOet41ID8UCpNLeDZNB-QALXTfwoIbxBKQlQTnNzfb1-5MyMmVe7bD3X-VkequHXptU1RIWZUGRzH3ye6bWFaHxQgCgmKsu6scVf7_Zbsove1WzRBTs-vsUx3QoihjhlK_ug195i1WqV-8_ykjeseKiLAE8a8PTwm6PUB-SnMj9gv3HLNU0so6v-6ZTYEzQW_tuGUdpF4K4X5q_7TURWk8qR8w02D0CWXepk91Y-kn6Z56nQ73joOXqKxhu9k_4Kzd"
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                        <div class="glitch-img-hover absolute inset-0 bg-accent mix-blend-overlay pointer-events-none">
-                        </div>
+                            class="w-full h-full object-cover" />
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
 
-        <footer class="mt-24 border-t-4 border-black bg-white pt-20 pb-10">
-            <div class="mx-auto max-w-[1600px] px-6 lg:px-12">
+        <!-- Footer -->
+        <footer class="bg-black text-white py-24 px-6 md:px-12 border-t-2 border-black">
+            <div class="max-w-[1600px] mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
-                    <div class="space-y-8">
-                        <div class="inline-block border-2 border-black p-4 bg-primary shadow-brutalist">
-                            <a class="block text-4xl font-serif font-black italic tracking-tighter text-black"
-                                href="index.html">N7.</a>
-                        </div>
-                        <p
-                            class="font-mono text-[10px] leading-relaxed text-black/60 max-w-xs uppercase tracking-widest">
-                            DNA_ENTRY_v2.0 // Modest fashion deconstructed. Designed in Colombo, Sri Lanka. Standardized
-                            for the cosmopolitan woman.
+                    <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                        <a class="font-serif text-5xl font-black italic tracking-tighter block mb-8"
+                            href="index.html">N7.</a>
+                        <p class="font-mono text-xs text-gray-400 leading-relaxed uppercase tracking-widest max-w-xs">
+                            Modest fashion deconstructed. Designed with architectural intention in Colombo, Sri Lanka.
                         </p>
-                        <div class="flex gap-4 pt-4 border-t-2 border-black/10">
-                            <a class="w-10 h-10 flex items-center justify-center border-2 border-black hover:bg-primary transition-all shadow-brutalist-sm hover:shadow-none bg-white"
-                                href="#"><i class="fa-brands fa-instagram text-black"></i></a>
-                            <a class="w-10 h-10 flex items-center justify-center border-2 border-black hover:bg-primary transition-all shadow-brutalist-sm hover:shadow-none bg-white"
-                                href="#"><i class="fa-brands fa-facebook text-black"></i></a>
-                            <a class="w-10 h-10 flex items-center justify-center border-2 border-black hover:bg-primary transition-all shadow-brutalist-sm hover:shadow-none bg-white"
-                                href="#"><i class="fa-brands fa-tiktok text-black"></i></a>
-                        </div>
                     </div>
                     <div>
-                        <h4 class="mb-10 font-display text-[10px] font-black uppercase tracking-[0.4em] text-black">
-                            Registry // Category</h4>
-                        <ul class="space-y-4 font-mono text-[10px] font-bold text-black/60 uppercase tracking-widest">
-                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
-                                        class="w-1.5 h-1.5 bg-primary"></span> New_Arrivals</a></li>
-                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
-                                        class="w-1.5 h-1.5 bg-black/20"></span> Abayas_Core</a></li>
-                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
-                                        class="w-1.5 h-1.5 bg-black/20"></span> Co_Ords</a></li>
-                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
-                                        class="w-1.5 h-1.5 bg-black/20"></span> Access_DNA</a></li>
+                        <h4 class="font-mono text-[10px] font-bold text-gray-500 uppercase tracking-[0.4em] mb-8">
+                            Registry_Maps</h4>
+                        <ul class="space-y-4 font-mono text-[10px] font-bold uppercase tracking-widest">
+                            <li><a class="hover:text-accent transition-colors block" href="collections.html">The
+                                    Drop</a></li>
+                            <li><a class="hover:text-accent transition-colors block" href="collections.html">Registry
+                                    Archive</a></li>
+                            <li><a class="hover:text-accent transition-colors block" href="about.html">Our Manifesto</a>
+                            </li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="mb-10 font-display text-[10px] font-black uppercase tracking-[0.4em] text-black">
-                            System // Support</h4>
-                        <ul class="space-y-4 font-mono text-[10px] font-bold text-black/60 uppercase tracking-widest">
-                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
-                                        class="w-1.5 h-1.5 bg-black/20"></span> Contact_HQ</a></li>
-                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
-                                        class="w-1.5 h-1.5 bg-black/20"></span> Logistics_Policy</a></li>
-                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
-                                        class="w-1.5 h-1.5 bg-black/20"></span> Return_Protocol</a></li>
-                            <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
-                                        class="w-1.5 h-1.5 bg-black/20"></span> Size_Metrics</a></li>
+                        <h4 class="font-mono text-[10px] font-bold text-gray-500 uppercase tracking-[0.4em] mb-8">
+                            System_Support</h4>
+                        <ul class="space-y-4 font-mono text-[10px] font-bold uppercase tracking-widest">
+                            <li><a class="hover:text-accent transition-colors block" href="#">Logistics_Policy</a></li>
+                            <li><a class="hover:text-accent transition-colors block" href="#">Sizing_Metrics</a></li>
+                            <li><a class="hover:text-accent transition-colors block" href="#">Contact_Concierge</a></li>
                         </ul>
                     </div>
-                    <div class="bg-primary/5 p-8 border-2 border-black border-dashed">
-                        <h4 class="mb-6 font-display text-[10px] font-black uppercase tracking-[0.4em] text-black">
-                            Update // Stream</h4>
-                        <p class="font-mono text-[10px] text-black/50 mb-6 uppercase tracking-widest leading-relaxed">
-                            Join the synchronization list for early access to core drops.</p>
-                        <form class="space-y-4 font-mono">
-                            <input
-                                class="w-full bg-white border-2 border-black p-3 text-[10px] text-black placeholder:text-black/30 focus:outline-none shadow-brutalist-sm"
-                                placeholder="ENTER_EMAIL" type="email" />
-                            <button
-                                class="w-full bg-black text-primary p-3 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-primary hover:text-black transition-all">Sychronize_Now</button>
+                    <div class="bg-accent p-8 border-2 border-black text-black">
+                        <h4 class="font-serif text-xl font-bold uppercase italic mb-4">Stream Update</h4>
+                        <p class="font-mono text-[10px] uppercase font-bold mb-6 opacity-60">Join for early access to
+                            core drops.</p>
+                        <form class="flex border-b-2 border-black pb-2">
+                            <input type="email" placeholder="EMAIL_ADDR"
+                                class="bg-transparent border-none focus:ring-0 font-mono text-xs w-full uppercase placeholder:text-black/30" />
+                            <button type="submit" class="material-symbols-outlined">arrow_forward</button>
                         </form>
                     </div>
                 </div>
                 <div
-                    class="flex flex-col items-center justify-between border-t-2 border-black pt-12 md:flex-row gap-6 font-mono text-[9px] font-bold uppercase tracking-[0.3em] text-black/40">
-                    <p>© 2024 N7_LK // ALL_RIGHTS_RESERVED.</p>
-                    <div class="flex gap-8">
-                        <a href="#" class="hover:text-black">Privacy_Protocol</a>
-                        <a href="#" class="hover:text-black">Terms_Of_Service</a>
-                        <a href="#" class="hover:text-black">Security_Manifesto</a>
+                    class="flex flex-col md:flex-row justify-between items-center font-mono text-[10px] text-gray-500 uppercase tracking-widest border-t border-zinc-800 pt-12">
+                    <p>© 2024 N7 LK // ALL_RIGHTS_RESERVED.</p>
+                    <div class="flex gap-8 mt-4 md:mt-0">
+                        <span>Colombo // Sri Lanka</span>
+                        <span>Modesty_System_v2.0</span>
                     </div>
                 </div>
             </div>
         </footer>
-
-
+    </main>
 </body>
-
-
-</html>
